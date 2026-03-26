@@ -85,6 +85,14 @@
   footer { background: #0D0805; color: rgba(255,255,255,0.5); padding: 2.5rem 2rem; text-align: center; font-family: 'Segoe UI', sans-serif; font-size: 0.85rem; }
   footer strong { color: var(--gold); display: block; margin-bottom: 0.5rem; font-size: 1rem; }
   @media(max-width: 768px) { .hero-content { grid-template-columns: 1fr; } .hero-text h1 { font-size: 2.5rem; } }
+
+  @media(max-width:768px){
+    .nav-links, .nav-cta { display:none!important; }
+    #mob-links-04familyrestaurant { display:none; }
+    #mob-links-04familyrestaurant.show { display:flex!important; flex-direction:column; position:absolute; top:70px; left:0; right:0; background:white; padding:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.15); z-index:50; }
+    #mob-links-04familyrestaurant.show a { margin:0!important; padding:10px 0; border-bottom:1px solid #eee; color:#333!important; display:block; }
+    #mob-btn-04familyrestaurant { display:block!important; }
+  }
 </style>
 
 <link rel="canonical" href="https://cafemilanopune.in/">
@@ -198,6 +206,10 @@
     <a href="#ambiance">Experience</a>
     <a href="#reserve" class="nav-res">Reserve Table</a>
   </div>
+<button id="mob-btn-04familyrestaurant" style="display:none;padding:8px;cursor:pointer;background:none;border:none;" onclick="document.getElementById('mob-links-04familyrestaurant').classList.toggle('show')" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+<div id="mob-links-04familyrestaurant"><a href="#menu">Menu</a>
+<a href="#ambiance">Experience</a>
+<a href="#reserve">Reserve Table</a></div>
 </nav>
 
 <section class="hero">

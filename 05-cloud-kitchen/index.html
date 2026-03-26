@@ -102,6 +102,14 @@
   footer strong { color: var(--gold); display: block; margin-bottom: 0.5rem; font-size: 1.1rem; }
 
   @media(max-width:768px) { .hero-content, .legacy-grid { grid-template-columns: 1fr; gap: 2rem; } .hero::after { display: none; } }
+
+  @media(max-width:768px){
+    .nav-links, .nav-cta { display:none!important; }
+    #mob-links-05cloudkitchen { display:none; }
+    #mob-links-05cloudkitchen.show { display:flex!important; flex-direction:column; position:absolute; top:70px; left:0; right:0; background:white; padding:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.15); z-index:50; }
+    #mob-links-05cloudkitchen.show a { margin:0!important; padding:10px 0; border-bottom:1px solid #eee; color:#333!important; display:block; }
+    #mob-btn-05cloudkitchen { display:block!important; }
+  }
 </style>
 
 <link rel="canonical" href="https://biryanihousepune.in/">
@@ -208,6 +216,10 @@
     <a href="#legacy">Our Story</a>
     <a href="#order" class="nav-order">Order Now</a>
   </div>
+<button id="mob-btn-05cloudkitchen" style="display:none;padding:8px;cursor:pointer;background:none;border:none;" onclick="document.getElementById('mob-links-05cloudkitchen').classList.toggle('show')" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+<div id="mob-links-05cloudkitchen"><a href="#menu">Menu</a>
+<a href="#legacy">Our Story</a>
+<a href="#order">Order Now</a></div>
 </nav>
 
 <section class="hero">
