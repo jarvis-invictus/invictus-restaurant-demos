@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spice Route — Authentic Indian Fine Dining | Koregaon Park, Pune</title>
+  <meta name="description" content="Spice Route offers an exquisite fine dining experience with authentic regional Indian cuisine, private dining rooms, and curated cocktails in the heart of Koregaon Park, Pune." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --saffron: #E8973A;
+      --crimson: #9B2335;
+      --gold: #C9922A;
+      --ivory: #FAF7F0;
+      --charcoal: #1C1C1E;
+      --dark-bg: #0F0A05;
+      --text-muted: #9A8A7A;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--dark-bg); color: var(--ivory); overflow-x: hidden; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 60px;
+      background: linear-gradient(180deg, rgba(15,10,5,0.95) 0%, transparent 100%);
+      backdrop-filter: blur(10px);
+    }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--saffron); letter-spacing: 2px; }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a { color: var(--ivory); text-decoration: none; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--saffron); }
+    .nav-cta { background: var(--crimson); color: white; padding: 12px 28px; border-radius: 2px; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; transition: background 0.3s; }
+    .nav-cta:hover { background: var(--saffron); color: var(--charcoal); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+      background: linear-gradient(135deg, #0F0A05 0%, #1A0A0A 50%, #0A0A0F 100%);
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(155,35,53,0.18) 0%, transparent 70%),
+                  radial-gradient(ellipse 50% 40% at 20% 70%, rgba(232,151,58,0.12) 0%, transparent 60%);
+    }
+    .hero-pattern {
+      position: absolute; inset: 0; opacity: 0.04;
+      background-image: repeating-linear-gradient(45deg, var(--saffron) 0, var(--saffron) 1px, transparent 0, transparent 50%);
+      background-size: 30px 30px;
+    }
+    .hero-content { position: relative; z-index: 2; text-align: center; max-width: 780px; padding: 0 40px; }
+    .hero-tagline {
+      display: inline-block; border: 1px solid var(--saffron); color: var(--saffron);
+      padding: 6px 20px; font-size: 0.75rem; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 28px; border-radius: 2px;
+    }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 7vw, 5.5rem); line-height: 1.1; font-weight: 700; margin-bottom: 24px; }
+    .hero h1 span { color: var(--saffron); display: block; }
+    .hero p { font-size: 1.15rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 40px; }
+    .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { background: var(--crimson); color: white; padding: 16px 40px; border-radius: 2px; text-decoration: none; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; transition: all 0.3s; }
+    .btn-primary:hover { background: var(--saffron); color: var(--charcoal); }
+    .btn-outline { border: 1px solid var(--ivory); color: var(--ivory); padding: 16px 40px; border-radius: 2px; text-decoration: none; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; transition: all 0.3s; }
+    .btn-outline:hover { border-color: var(--saffron); color: var(--saffron); }
+    .hero-scroll { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.75rem; letter-spacing: 2px; }
+    .hero-scroll span { width: 1px; height: 50px; background: linear-gradient(180deg, var(--saffron), transparent); animation: scrollPulse 2s infinite; }
+    @keyframes scrollPulse { 0%,100%{opacity:0.3} 50%{opacity:1} }
+
+    /* SECTION COMMONS */
+    section { padding: 100px 60px; }
+    .section-label { font-size: 0.75rem; letter-spacing: 4px; text-transform: uppercase; color: var(--saffron); margin-bottom: 16px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700; margin-bottom: 20px; }
+    .section-divider { width: 60px; height: 2px; background: var(--saffron); margin-bottom: 24px; }
+    .text-muted { color: var(--text-muted); }
+
+    /* ABOUT */
+    .about { background: #110C07; }
+    .about-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .about-text p { color: var(--text-muted); line-height: 1.9; margin-bottom: 20px; font-size: 1.05rem; }
+    .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; }
+    .stat { border: 1px solid rgba(232,151,58,0.2); padding: 24px; border-radius: 4px; text-align: center; }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 2.4rem; color: var(--saffron); font-weight: 700; }
+    .stat-label { font-size: 0.8rem; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; margin-top: 6px; }
+    .about-visual { position: relative; }
+    .about-card {
+      background: linear-gradient(135deg, rgba(155,35,53,0.15), rgba(232,151,58,0.08));
+      border: 1px solid rgba(232,151,58,0.2); border-radius: 8px; padding: 40px;
+      height: 420px; display: flex; flex-direction: column; justify-content: flex-end;
+    }
+    .about-card-badge { font-size: 4rem; margin-bottom: auto; }
+    .about-card h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 10px; }
+    .about-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; }
+
+    /* MENU HIGHLIGHTS */
+    .menu { max-width: 1200px; margin: 0 auto; }
+    .menu-header { text-align: center; margin-bottom: 64px; }
+    .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .menu-card {
+      background: #110C07; border: 1px solid rgba(232,151,58,0.15); border-radius: 8px;
+      overflow: hidden; transition: transform 0.3s, border-color 0.3s;
+    }
+    .menu-card:hover { transform: translateY(-6px); border-color: var(--saffron); }
+    .menu-card-img {
+      height: 220px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 5rem;
+    }
+    .mc-1 { background: linear-gradient(135deg, #2A0A10, #1A0505); }
+    .mc-2 { background: linear-gradient(135deg, #0A1A2A, #050F1A); }
+    .mc-3 { background: linear-gradient(135deg, #1A1A0A, #0F0F05); }
+    .mc-4 { background: linear-gradient(135deg, #2A1A0A, #1A0F05); }
+    .mc-5 { background: linear-gradient(135deg, #1A0A2A, #0F051A); }
+    .mc-6 { background: linear-gradient(135deg, #0A2A1A, #051A0F); }
+    .menu-card-body { padding: 24px; }
+    .menu-card h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; }
+    .menu-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; margin-bottom: 16px; }
+    .menu-card-footer { display: flex; justify-content: space-between; align-items: center; }
+    .menu-price { color: var(--saffron); font-size: 1.1rem; font-weight: 600; }
+    .menu-tag { background: rgba(155,35,53,0.2); color: var(--crimson); border: 1px solid rgba(155,35,53,0.3); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; }
+    .menu-tag.veg { background: rgba(34,139,34,0.15); color: #4CAF50; border-color: rgba(34,139,34,0.3); }
+
+    /* EXPERIENCE */
+    .experience { background: #110C07; }
+    .exp-inner { max-width: 1100px; margin: 0 auto; }
+    .exp-header { text-align: center; margin-bottom: 64px; }
+    .exp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .exp-card {
+      border: 1px solid rgba(232,151,58,0.15); border-radius: 8px; padding: 36px;
+      transition: border-color 0.3s;
+      background: linear-gradient(135deg, rgba(15,10,5,0.8), rgba(26,10,10,0.4));
+    }
+    .exp-card:hover { border-color: var(--saffron); }
+    .exp-icon { font-size: 2.5rem; margin-bottom: 20px; }
+    .exp-card h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 12px; }
+    .exp-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; }
+
+    /* PRIVATE DINING */
+    .private { max-width: 1000px; margin: 0 auto; text-align: center; }
+    .private-header { margin-bottom: 48px; }
+    .private-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 48px; }
+    .private-card {
+      background: linear-gradient(135deg, rgba(155,35,53,0.1), rgba(232,151,58,0.05));
+      border: 1px solid rgba(232,151,58,0.2); border-radius: 8px; padding: 40px; text-align: left;
+    }
+    .private-card h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 12px; color: var(--saffron); }
+    .private-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px; }
+    .private-card ul { list-style: none; }
+    .private-card ul li { color: var(--text-muted); font-size: 0.9rem; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 10px; }
+    .private-card ul li::before { content: ''; color: var(--saffron); font-size: 0.6rem; }
+
+    /* REVIEWS */
+    .reviews { background: #110C07; }
+    .reviews-inner { max-width: 1100px; margin: 0 auto; }
+    .reviews-header { text-align: center; margin-bottom: 64px; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .review-card {
+      border: 1px solid rgba(232,151,58,0.15); border-radius: 8px; padding: 32px;
+      background: rgba(255,255,255,0.02);
+    }
+    .review-stars { color: var(--saffron); font-size: 1.1rem; margin-bottom: 16px; }
+    .review-text { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+    .review-author { display: flex; align-items: center; gap: 12px; }
+    .review-avatar { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; font-family: 'Playfair Display', serif; }
+    .av1 { background: rgba(155,35,53,0.3); color: var(--crimson); }
+    .av2 { background: rgba(232,151,58,0.3); color: var(--saffron); }
+    .av3 { background: rgba(201,146,42,0.3); color: var(--gold); }
+    .review-name { font-weight: 600; font-size: 0.95rem; }
+    .review-date { color: var(--text-muted); font-size: 0.8rem; }
+
+    /* RESERVATION */
+    .reservation { max-width: 700px; margin: 0 auto; text-align: center; }
+    .reservation-header { margin-bottom: 48px; }
+    .res-form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; text-align: left; }
+    .form-group { display: flex; flex-direction: column; gap: 8px; }
+    .form-group.full { grid-column: 1 / -1; }
+    .form-group label { font-size: 0.8rem; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; }
+    .form-group input, .form-group select, .form-group textarea {
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(232,151,58,0.2);
+      color: var(--ivory); padding: 14px 16px; border-radius: 4px; font-size: 0.95rem; font-family: inherit;
+      transition: border-color 0.3s;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none; border-color: var(--saffron);
+    }
+    .form-group select option { background: var(--charcoal); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-submit { grid-column: 1 / -1; margin-top: 8px; }
+    .form-submit button {
+      width: 100%; background: var(--crimson); color: white; padding: 18px; border: none; border-radius: 4px;
+      font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: background 0.3s; font-family: inherit;
+    }
+    .form-submit button:hover { background: var(--saffron); color: var(--charcoal); }
+
+    /* FOOTER */
+    footer {
+      background: #070504; border-top: 1px solid rgba(232,151,58,0.1);
+      padding: 60px; text-align: center;
+    }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--saffron); margin-bottom: 16px; letter-spacing: 3px; }
+    .footer-tagline { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 32px; }
+    .footer-info { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; margin-bottom: 32px; }
+    .footer-col h4 { font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: var(--saffron); margin-bottom: 12px; }
+    .footer-col p, .footer-col a { color: var(--text-muted); font-size: 0.9rem; line-height: 1.8; text-decoration: none; display: block; }
+    .footer-col a:hover { color: var(--saffron); }
+    .footer-bottom { color: rgba(255,255,255,0.2); font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 24px; }
+    .invictus-tag { color: var(--saffron); opacity: 0.7; }
+
+    /* BANNER */
+    .award-banner { background: linear-gradient(90deg, var(--crimson), var(--saffron), var(--gold), var(--saffron), var(--crimson)); background-size: 200% auto; animation: shimmer 4s linear infinite; padding: 14px; text-align: center; font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; color: white; }
+    @keyframes shimmer { 0%{background-position:0%} 100%{background-position:200%} }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      section { padding: 70px 20px; }
+      .about-inner, .menu-grid, .exp-grid, .reviews-grid, .private-cards { grid-template-columns: 1fr; }
+      .res-form { grid-template-columns: 1fr; }
+      footer { padding: 40px 20px; }
+      .footer-info { gap: 30px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="award-banner"> Best Fine Dining Pune 2025 — Times Food Guide &nbsp;|&nbsp; Zomato Gold Certified &nbsp;|&nbsp; </div>
+
+  <nav>
+    <div class="nav-logo">Spice Route</div>
+    <ul class="nav-links">
+      <li><a href="#about">Our Story</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#private">Private Dining</a></li>
+      <li><a href="#reserve">Contact</a></li>
+    </ul>
+    <a href="#reserve" class="nav-cta">Reserve a Table</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-content">
+      <div class="hero-tagline">Est. 2017 · Koregaon Park, Pune</div>
+      <h1>Where India's Flavours <span>Come Alive</span></h1>
+      <p>From fragrant coastal curries to smoky tandoor classics — a culinary journey across 29 states, curated by Chef Arjun Mehta, plated with artistry.</p>
+      <div class="hero-actions">
+        <a href="#reserve" class="btn-primary">Reserve Your Table</a>
+        <a href="#menu" class="btn-outline">Explore the Menu</a>
+      </div>
+    </div>
+    <div class="hero-scroll">Scroll<span></span></div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="about-inner">
+      <div class="about-text">
+        <div class="section-label">Our Story</div>
+        <h2 class="section-title">A Love Letter to Indian Cuisine</h2>
+        <div class="section-divider"></div>
+        <p>Spice Route was born from a simple belief: that Indian food, at its best, is among the most sophisticated and diverse cuisines in the world. We're not a buffet. We're not "curry house." We are a fine dining experience dedicated to the depth and beauty of regional Indian cooking.</p>
+        <p>Chef Arjun Mehta spent 11 years travelling across India — apprenticing under a Lucknowi khansama, learning coastal fish curries in Mangalore, mastering dum cooking in Hyderabad. Every dish on our menu carries that story.</p>
+        <div class="about-stats">
+          <div class="stat">
+            <div class="stat-num">7+</div>
+            <div class="stat-label">Years of Excellence</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">4,200+</div>
+            <div class="stat-label">Happy Guests Monthly</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">29</div>
+            <div class="stat-label">States Represented</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">4.8</div>
+            <div class="stat-label">Zomato Rating</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div class="about-card">
+          <div class="about-card-badge">CHEF</div>
+          <h3>Chef Arjun Mehta</h3>
+          <p>Formerly of ITC Grand Chola, Chennai. 14 years of mastery across India's regional kitchens. James Beard Nominee 2024.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="menu">
+      <div class="menu-header">
+        <div class="section-label">Signature Dishes</div>
+        <h2 class="section-title">Curated for the Discerning Palate</h2>
+        <div class="section-divider" style="margin: 0 auto 20px;"></div>
+        <p class="text-muted" style="max-width:600px; margin:0 auto; line-height:1.8;">Seasonal ingredients, heirloom spice blends, and two decades of technique — every plate is a destination.</p>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="menu-card-img mc-1">LOBSTR</div>
+          <div class="menu-card-body">
+            <h3>Lobster Malabar Curry</h3>
+            <p>Kerala-style coconut curry with Karwar lobster, curry leaf tempering, and appam. A coastal masterpiece.</p>
+            <div class="menu-card-footer">
+              <span class="menu-price">₹2,100</span>
+              <span class="menu-tag">Chef's Choice</span>
+            </div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-img mc-3">CURRY</div>
+          <div class="menu-card-body">
+            <h3>Dum Gosht Awadhi</h3>
+            <p>Slow-cooked lamb in sealed handi for 8 hours with Lucknowi spices. The hallmark of Nawabi cuisine.</p>
+            <div class="menu-card-footer">
+              <span class="menu-price">₹1,650</span>
+              <span class="menu-tag">Bestseller</span>
+            </div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-img mc-6">VEG</div>
+          <div class="menu-card-body">
+            <h3>Jackfruit Andhra Kura</h3>
+            <p>Young jackfruit in fiery Andhra spice paste, tempered with mustard and asafoetida. Pure comfort.</p>
+            <div class="menu-card-footer">
+              <span class="menu-price">₹820</span>
+              <span class="menu-tag veg">Vegetarian</span>
+            </div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-img mc-4">STEW</div>
+          <div class="menu-card-body">
+            <h3>Rajasthani Laal Maas</h3>
+            <p>Authentic mutton preparation with Mathania chillies and yogurt. Only on weekends — served flambé.</p>
+            <div class="menu-card-footer">
+              <span class="menu-price">₹1,450</span>
+              <span class="menu-tag">Weekend Special</span>
+            </div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-img mc-5">ASIAN</div>
+          <div class="menu-card-body">
+            <h3>Bamboo Shoot Naga Pork</h3>
+            <p>Northeast India's prized preparation — fermented bamboo shoot with smoked pork, Naga chilli oil.</p>
+            <div class="menu-card-footer">
+              <span class="menu-price">₹1,380</span>
+              <span class="menu-tag">Rare Find</span>
+            </div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-img mc-2">PRSRV</div>
+          <div class="menu-card-body">
+            <h3>Black Garlic Dal Makhani</h3>
+            <p>72-hour slow-cooked black lentils with house-smoked black garlic butter, cream truffle finish.</p>
+            <div class="menu-card-footer">
+              <span class="menu-price">₹680</span>
+              <span class="menu-tag veg">Vegetarian</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="experience">
+    <div class="exp-inner">
+      <div class="exp-header">
+        <div class="section-label">The Experience</div>
+        <h2 class="section-title">More Than a Meal</h2>
+        <div class="section-divider" style="margin: 0 auto;"></div>
+      </div>
+      <div class="exp-grid">
+        <div class="exp-card">
+          <div class="exp-icon">BAR</div>
+          <h3>Craft Cocktail Bar</h3>
+          <p>India-inspired cocktails by our mixologist — think saffron negroni, masala chai old fashioned, and kokum spritz. 80+ labels of fine whisky and wine.</p>
+        </div>
+        <div class="exp-card">
+          <div class="exp-icon">LIVE</div>
+          <h3>Live Classical Music</h3>
+          <p>Friday & Saturday evenings: live sitar or sarod performances from 7:30 PM. Immerse yourself in the full sensory experience.</p>
+        </div>
+        <div class="exp-card">
+          <div class="exp-icon">CHEF</div>
+          <h3>Chef's Tasting Menu</h3>
+          <p>8-course culinary journey with wine pairings. Pre-booked only, available Thursday–Saturday. ₹4,500 per person inclusive.</p>
+        </div>
+        <div class="exp-card">
+          <div class="exp-icon">GRDN</div>
+          <h3>Garden Terrace</h3>
+          <p>Al-fresco dining in our canopied garden terrace, decorated with marigold lanterns. Seats 30. Perfect for evenings with a breeze.</p>
+        </div>
+        <div class="exp-card">
+          <div class="exp-icon">CELB</div>
+          <h3>Celebration Packages</h3>
+          <p>Anniversary dinners, birthday surprises, proposals — we curate the full experience. Flowers, custom desserts, décor included.</p>
+        </div>
+        <div class="exp-card">
+          <div class="exp-icon">WINE</div>
+          <h3>Wine & Dine Events</h3>
+          <p>Monthly curated wine dinners with sommeliers. 4 courses, 4 wines, an evening of stories and flavours. Limited to 24 guests.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="private">
+    <div class="private">
+      <div class="private-header">
+        <div class="section-label">Exclusive Spaces</div>
+        <h2 class="section-title">Private Dining Rooms</h2>
+        <div class="section-divider" style="margin: 0 auto 16px;"></div>
+        <p class="text-muted">For intimate gatherings, corporate dinners, and milestone celebrations — our private rooms offer seclusion and grandeur.</p>
+      </div>
+      <div class="private-cards">
+        <div class="private-card">
+          <h3>The Maharaja Room</h3>
+          <p>Our flagship private dining experience. Royal Rajasthani décor, antique brass accents, and a dedicated butler.</p>
+          <ul>
+            <li>Capacity: 8–16 guests</li>
+            <li>Dedicated butler service</li>
+            <li>Customisable menu &amp; décor</li>
+            <li>AV system for presentations</li>
+            <li>Pre-fixe from ₹5,000/head</li>
+          </ul>
+        </div>
+        <div class="private-card">
+          <h3>The Spice Library</h3>
+          <p>Intimate, book-lined room with curated spice display. Ideal for smaller groups and proposal dinners.</p>
+          <ul>
+            <li>Capacity: 4–8 guests</li>
+            <li>Sommelier on request</li>
+            <li>Custom floral arrangement</li>
+            <li>Personalised menu cards</li>
+            <li>Pre-fixe from ₹3,500/head</li>
+          </ul>
+        </div>
+      </div>
+      <a href="#reserve" class="btn-primary">Enquire About Private Dining</a>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="reviews-inner">
+      <div class="reviews-header">
+        <div class="section-label">Guest Voices</div>
+        <h2 class="section-title">What Our Guests Say</h2>
+        <div class="section-divider" style="margin: 0 auto;"></div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars"></div>
+          <p class="review-text">"The Lobster Malabar Curry is the single best dish I've eaten in Pune. The balance of spice, coconut, and sea — extraordinary. I've been back five times."</p>
+          <div class="review-author">
+            <div class="review-avatar av1">R</div>
+            <div>
+              <div class="review-name">Rohit Phadnis</div>
+              <div class="review-date">Zomato · February 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars"></div>
+          <p class="review-text">"We hosted our 25th anniversary dinner in the Maharaja Room. Chef Arjun personally designed the menu around our favourite travels across India. We cried. It was perfect."</p>
+          <div class="review-author">
+            <div class="review-avatar av2">P</div>
+            <div>
+              <div class="review-name">Priya & Sameer Joshi</div>
+              <div class="review-date">Google · January 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars"></div>
+          <p class="review-text">"For a food writer who's dined across 40 countries — this is the Indian restaurant I'd show the world. The Naga Pork alone justifies a flight to Pune."</p>
+          <div class="review-author">
+            <div class="review-avatar av3">A</div>
+            <div>
+              <div class="review-name">Ananya Krishnan</div>
+              <div class="review-date">Times of India Food Column</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reserve">
+    <div class="reservation">
+      <div class="reservation-header">
+        <div class="section-label">Reserve Your Table</div>
+        <h2 class="section-title">Join Us for an Unforgettable Evening</h2>
+        <div class="section-divider" style="margin: 0 auto 16px;"></div>
+        <p class="text-muted">Reservations recommended. Walk-ins welcome based on availability.</p>
+      </div>
+      <form class="res-form" onsubmit="return false;">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Your name" />
+        </div>
+        <div class="form-group">
+          <label>Mobile Number</label>
+          <input type="tel" placeholder="+91 98765 43210" />
+        </div>
+        <div class="form-group">
+          <label>Date</label>
+          <input type="date" />
+        </div>
+        <div class="form-group">
+          <label>Time</label>
+          <select>
+            <option>Select a time</option>
+            <option>12:30 PM (Lunch)</option>
+            <option>1:00 PM (Lunch)</option>
+            <option>1:30 PM (Lunch)</option>
+            <option>7:00 PM (Dinner)</option>
+            <option>7:30 PM (Dinner)</option>
+            <option>8:00 PM (Dinner)</option>
+            <option>8:30 PM (Dinner)</option>
+            <option>9:00 PM (Dinner)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Party Size</label>
+          <select>
+            <option>Select guests</option>
+            <option>1–2 guests</option>
+            <option>3–4 guests</option>
+            <option>5–6 guests</option>
+            <option>7–10 guests</option>
+            <option>Private Dining (10+)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Occasion</label>
+          <select>
+            <option>None / Regular Dinner</option>
+            <option>Birthday Celebration</option>
+            <option>Anniversary</option>
+            <option>Business Dinner</option>
+            <option>Proposal</option>
+            <option>Family Get-Together</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label>Special Requests</label>
+          <textarea placeholder="Dietary restrictions, allergies, décor preferences..."></textarea>
+        </div>
+        <div class="form-submit">
+          <button type="submit">Confirm Reservation</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">Spice Route</div>
+    <div class="footer-tagline">Authentic Indian Fine Dining · Koregaon Park, Pune</div>
+    <div class="footer-info">
+      <div class="footer-col">
+        <h4>Address</h4>
+        <p>14, North Main Road</p>
+        <p>Koregaon Park, Pune 411001</p>
+        <p>Near Lane 6, Above Zara</p>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <p>Lunch: 12:00 – 3:30 PM</p>
+        <p>Dinner: 7:00 – 11:30 PM</p>
+        <p>Closed Tuesdays</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+912067891234">+91 20 6789 1234</a>
+        <a href="tel:+919876543210">+91 98765 43210</a>
+        <a href="mailto:reserve@spiceroute.in">reserve@spiceroute.in</a>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <a href="#">@SpiceRoutePune (Instagram)</a>
+        <a href="#">Facebook: Spice Route Pune</a>
+        <a href="#">Zomato: 4.8  (1,240 reviews)</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Spice Route Fine Dining · <span class="invictus-tag">Website by Invictus AI</span>
+    </div>
+  </footer>
+
+</body>
+</html>

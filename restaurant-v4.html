@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cafe Milano — Italian & Continental | Pune</title>
+<meta name="description" content="Family restaurant in Pune. Wholesome Indian & multi-cuisine meals for the whole family. Generous portions, friendly staff. Dine in or order online.">
+<meta name="keywords" content="family restaurant pune, indian restaurant pune, multi cuisine pune, order food pune, dine in pune">
+<meta property="og:title" content="Cafe Milano — Italian & Continental | Pune">
+<meta property="og:description" content="Family restaurant in Pune. Wholesome Indian & multi-cuisine meals for the whole family. Generous portions, friendly staff. Dine in or order online.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Cafe Milano",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Pune",
+    "addressRegion": "Maharashtra",
+    "addressCountry": "IN"
+  },
+  "url": "https://invictus-ai.in"
+}
+</script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root { --red: #C0392B; --gold: #D4AC0D; --cream: #FDF8EF; --dark: #1A1008; --text: #2C2418; --warm: #8B5E3C; }
+  body { font-family: Georgia, 'Times New Roman', serif; background: var(--cream); color: var(--text); }
+  nav { background: var(--dark); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+  .logo { color: var(--gold); font-size: 1.8rem; font-weight: 400; letter-spacing: 2px; font-style: italic; }
+  nav a { color: rgba(255,255,255,0.8); text-decoration: none; margin-left: 1.5rem; font-size: 0.9rem; font-family: 'Segoe UI', sans-serif; letter-spacing: 1px; text-transform: uppercase; }
+  nav a:hover { color: var(--gold); }
+  .nav-res { background: var(--red); color: white !important; padding: 0.5rem 1.3rem; border-radius: 4px; }
+
+  .hero { background: var(--dark); min-height: 90vh; display: flex; align-items: center; position: relative; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><circle cx="50" cy="50" r="40" fill="none" stroke="%23ffffff05" stroke-width="1"/></svg>') repeat; }
+  .hero-content { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; position: relative; z-index: 1; }
+  .hero-text { }
+  .hero-tag { color: var(--gold); font-size: 0.85rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 1rem; font-family: 'Segoe UI', sans-serif; }
+  .hero-text h1 { color: white; font-size: 3.5rem; font-weight: 400; line-height: 1.2; margin-bottom: 1.5rem; }
+  .hero-text h1 em { color: var(--gold); font-style: italic; }
+  .hero-text p { color: rgba(255,255,255,0.75); font-size: 1.05rem; line-height: 1.9; margin-bottom: 2rem; font-family: 'Segoe UI', sans-serif; }
+  .hero-btns { display: flex; gap: 1rem; }
+  .btn-gold { background: var(--gold); color: var(--dark); padding: 0.9rem 2.2rem; font-size: 0.9rem; text-decoration: none; letter-spacing: 1px; text-transform: uppercase; font-family: 'Segoe UI', sans-serif; font-weight: 600; }
+  .btn-ghost { border: 1px solid rgba(255,255,255,0.4); color: white; padding: 0.9rem 2.2rem; font-size: 0.9rem; text-decoration: none; letter-spacing: 1px; text-transform: uppercase; font-family: 'Segoe UI', sans-serif; }
+  .hero-info { background: rgba(255,255,255,0.05); border: 1px solid rgba(212,172,13,0.3); padding: 2rem; }
+  .info-row { display: flex; justify-content: space-between; padding: 0.8rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-family: 'Segoe UI', sans-serif; font-size: 0.9rem; }
+  .info-row:last-child { border-bottom: none; }
+  .info-row span:first-child { color: rgba(255,255,255,0.6); }
+  .info-row span:last-child { color: var(--gold); font-weight: 600; }
+
+  .tagline-bar { background: var(--red); padding: 0.8rem 2rem; text-align: center; }
+  .tagline-bar p { color: white; font-size: 0.9rem; letter-spacing: 1px; font-family: 'Segoe UI', sans-serif; }
+
+  section { padding: 5rem 2rem; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  .section-tag { color: var(--red); font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 0.5rem; font-family: 'Segoe UI', sans-serif; }
+  h2 { font-size: 2.5rem; font-weight: 400; color: var(--dark); margin-bottom: 0.5rem; }
+  .subtitle { color: #888; margin-bottom: 3rem; font-size: 1rem; font-family: 'Segoe UI', sans-serif; }
+
+  .menu-categories { display: flex; gap: 0.8rem; margin-bottom: 2rem; flex-wrap: wrap; }
+  .cat-btn { background: transparent; border: 1px solid #ddd; padding: 0.5rem 1.2rem; cursor: pointer; font-family: 'Segoe UI', sans-serif; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; color: #888; }
+  .cat-btn.active { background: var(--dark); color: white; border-color: var(--dark); }
+  .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0; border: 1px solid #e8e0d4; }
+  .menu-item { padding: 1.5rem; border-bottom: 1px solid #e8e0d4; border-right: 1px solid #e8e0d4; }
+  .menu-item:nth-child(2n) { border-right: none; }
+  .menu-item-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; }
+  .menu-item h3 { font-size: 1.05rem; color: var(--dark); font-weight: 400; }
+  .menu-price { color: var(--red); font-weight: 700; font-family: 'Segoe UI', sans-serif; }
+  .menu-item p { color: #777; font-size: 0.85rem; line-height: 1.6; font-family: 'Segoe UI', sans-serif; }
+  .veg-dot { width: 10px; height: 10px; background: green; border-radius: 50%; display: inline-block; margin-left: 0.5rem; }
+  .nonveg-dot { width: 10px; height: 10px; background: var(--red); border-radius: 50%; display: inline-block; margin-left: 0.5rem; }
+
+  .ambiance { background: var(--dark); padding: 5rem 2rem; }
+  .ambiance h2 { color: white; }
+  .ambiance .section-tag { color: var(--gold); }
+  .ambiance .subtitle { color: rgba(255,255,255,0.6); }
+  .amb-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1px; background: rgba(255,255,255,0.1); }
+  .amb-item { background: var(--dark); padding: 2rem; text-align: center; }
+  .amb-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+  .amb-item h3 { color: var(--gold); font-size: 1rem; margin-bottom: 0.5rem; font-weight: 400; }
+  .amb-item p { color: rgba(255,255,255,0.6); font-size: 0.85rem; line-height: 1.6; font-family: 'Segoe UI', sans-serif; }
+
+  .reviews { background: #FAF7F2; }
+  .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+  .review-card { background: white; padding: 2rem; border-left: 3px solid var(--gold); }
+  .stars { color: var(--gold); margin-bottom: 0.8rem; letter-spacing: 2px; }
+  .review-card p { color: #555; line-height: 1.8; margin-bottom: 1.2rem; font-size: 0.95rem; }
+  .reviewer { font-family: 'Segoe UI', sans-serif; }
+  .reviewer strong { color: var(--dark); font-size: 0.9rem; }
+  .reviewer span { color: #aaa; font-size: 0.8rem; display: block; }
+
+  .reserve { background: linear-gradient(135deg, var(--dark), #3D1A0A); padding: 5rem 2rem; text-align: center; }
+  .reserve h2 { color: white; font-size: 2.8rem; }
+  .reserve p { color: rgba(255,255,255,0.7); margin: 1rem 0 2rem; font-family: 'Segoe UI', sans-serif; }
+  .res-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+  footer { background: #0D0805; color: rgba(255,255,255,0.5); padding: 2.5rem 2rem; text-align: center; font-family: 'Segoe UI', sans-serif; font-size: 0.85rem; }
+  footer strong { color: var(--gold); display: block; margin-bottom: 0.5rem; font-size: 1rem; }
+  @media(max-width: 768px) { .hero-content { grid-template-columns: 1fr; } .hero-text h1 { font-size: 2.5rem; } }
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">Café Milano</div>
+  <div>
+    <a href="#menu">Menu</a>
+    <a href="#ambiance">Experience</a>
+    <a href="#reserve" class="nav-res">Reserve Table</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-tag">Est. 2018 · Koregaon Park, Pune</div>
+      <h1>Authentic Italian,<br><em>Crafted With Love</em></h1>
+      <p>From hand-tossed Neapolitan pizzas to slow-braised ossobuco, every dish at Café Milano is a love letter to Italian tradition — served in the heart of Pune.</p>
+      <div class="hero-btns">
+        <a href="#reserve" class="btn-gold">Reserve a Table</a>
+        <a href="#menu" class="btn-ghost">View Menu</a>
+      </div>
+    </div>
+    <div class="hero-info">
+      <div class="info-row"><span>Location</span><span>Koregaon Park, Lane 5</span></div>
+      <div class="info-row"><span>Lunch</span><span>12:00 PM – 3:30 PM</span></div>
+      <div class="info-row"><span>Dinner</span><span>7:00 PM – 11:30 PM</span></div>
+      <div class="info-row"><span>Sunday Brunch</span><span>11:00 AM – 4:00 PM</span></div>
+      <div class="info-row"><span>Rating</span><span>4.7 on Zomato</span></div>
+      <div class="info-row"><span>Covers</span><span>80 Indoor · 30 Terrace</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="tagline-bar">
+  <p>Authentic wood-fired pizza · Handmade pasta · Curated Italian wine list · Live music every Friday</p>
+</div>
+
+<section id="menu">
+  <div class="container">
+    <div class="section-tag">Our Menu</div>
+    <h2>From Naples to Pune</h2>
+    <p class="subtitle">All pastas are handmade in-house. All pizzas are wood-fired at 450°C.</p>
+    <div class="menu-categories">
+      <button class="cat-btn active">All</button>
+      <button class="cat-btn">Antipasti</button>
+      <button class="cat-btn">Pasta</button>
+      <button class="cat-btn">Pizza</button>
+      <button class="cat-btn">Mains</button>
+      <button class="cat-btn">Desserts</button>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-item-header">
+          <h3>Bruschetta al Pomodoro <span class="veg-dot"></span></h3>
+          <span class="menu-price">₹280</span>
+        </div>
+        <p>Charred sourdough, heirloom tomatoes, fresh basil, extra-virgin olive oil, fleur de sel</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-header">
+          <h3>Burrata & Prosciutto <span class="nonveg-dot"></span></h3>
+          <span class="menu-price">₹520</span>
+        </div>
+        <p>Imported burrata, Parma ham, arugula, balsamic reduction, truffle honey</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-header">
+          <h3>Tagliatelle al Ragù <span class="nonveg-dot"></span></h3>
+          <span class="menu-price">₹540</span>
+        </div>
+        <p>Handmade egg pasta, slow-braised beef ragù, 6-hour Bolognese sauce, Parmigiano Reggiano</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-header">
+          <h3>Cacio e Pepe <span class="veg-dot"></span></h3>
+          <span class="menu-price">₹420</span>
+        </div>
+        <p>Tonnarelli pasta, Pecorino Romano, aged Parmigiano, toasted black pepper — a Roman classic</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-header">
+          <h3>Margherita DOC <span class="veg-dot"></span></h3>
+          <span class="menu-price">₹480</span>
+        </div>
+        <p>San Marzano DOP tomatoes, Fior di Latte, fresh basil, wood-fired at 450°C</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-header">
+          <h3>Diavola <span class="nonveg-dot"></span></h3>
+          <span class="menu-price">₹560</span>
+        </div>
+        <p>Spicy salami piccante, mozzarella, tomato, Calabrian chilli, fresh oregano</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ambiance" id="ambiance">
+  <div class="container">
+    <div class="section-tag">The Experience</div>
+    <h2>More Than a Meal</h2>
+    <p class="subtitle">Every visit to Café Milano is an occasion</p>
+    <div class="amb-grid">
+      <div class="amb-item">
+        <div class="amb-icon">INTL</div>
+        <h3>Elegant Interiors</h3>
+        <p>Travertine marble, soft lighting, handpainted murals. A slice of Florence in Pune.</p>
+      </div>
+      <div class="amb-item">
+        <div class="amb-icon">WINE</div>
+        <h3>Italian Wine Cellar</h3>
+        <p>70+ labels from Tuscany, Piedmont, and Sicily. Sommelier-curated pairings available.</p>
+      </div>
+      <div class="amb-item">
+        <div class="amb-icon">JAZZ</div>
+        <h3>Live Jazz Fridays</h3>
+        <p>Every Friday evening, 8 PM. Reservations recommended for live music nights.</p>
+      </div>
+      <div class="amb-item">
+        <div class="amb-icon">PRIV</div>
+        <h3>Private Dining</h3>
+        <p>Intimate private dining room for 12. Perfect for anniversaries, proposals, and corporate dinners.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="container">
+    <div class="section-tag">Guest Stories</div>
+    <h2>What Our Guests Say</h2>
+    <p class="subtitle">From date nights to anniversary dinners</p>
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="stars"></div>
+        <p>"Proposed to my girlfriend here on a Friday jazz night. The ambiance was perfect, the food was extraordinary. The staff helped arrange the surprise — they were impeccable."</p>
+        <div class="reviewer"><strong>Vikram Nair</strong><span>Anniversary Dinner · Koregaon Park</span></div>
+      </div>
+      <div class="review-card">
+        <div class="stars"></div>
+        <p>"The Cacio e Pepe is the best I've had outside Rome — and I've eaten in Rome. The pasta is genuinely handmade. This is what Italian food in India should taste like."</p>
+        <div class="reviewer"><strong>Meera Krishnan</strong><span>Food Blogger · Pune</span></div>
+      </div>
+      <div class="review-card">
+        <div class="stars"></div>
+        <p>"Brought international clients here for a business dinner. Everyone was impressed. The burrata was a showstopper. Closed the deal over tiramisu. Café Milano is my secret weapon."</p>
+        <div class="reviewer"><strong>Deepak Mehta</strong><span>Corporate Client · Bund Garden</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reserve" id="reserve">
+  <div class="container">
+    <h2>Reserve Your Table</h2>
+    <p>For special occasions, private dining, or a spontaneous weeknight escape</p>
+    <div class="res-btns">
+      <a href="tel:+912012345678" class="btn-gold">Call to Reserve</a>
+      <a href="#" class="btn-ghost" style="border-color: rgba(255,255,255,0.4); color: white;">WhatsApp Us</a>
+    </div>
+    <p style="margin-top: 1.5rem; color: rgba(255,255,255,0.5); font-family: 'Segoe UI', sans-serif; font-size: 0.85rem;">Lane 5, Koregaon Park, Pune 411001 · Valet Parking Available</p>
+  </div>
+</section>
+
+<footer>
+  <strong>Café Milano</strong>
+  <p>Koregaon Park, Pune · Lunch 12–3:30 · Dinner 7–11:30 · Closed Mondays</p>
+  <p>+91 20 1234 5678 · reservations@cafemilano.in</p>
+  <p style="margin-top: 1rem; opacity: 0.4;">Demo site by Invictus AI · invictus-ai.in</p>
+</footer>
+</body>
+</html>
