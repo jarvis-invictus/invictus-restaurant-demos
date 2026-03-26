@@ -3,207 +3,346 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cafe Milano — Italian & Continental | Pune</title>
+<title>Biryani House — Authentic Dum Biryani | Pune</title>
+<meta name="description" content="Cloud kitchen in Pune. Restaurant-quality food delivered to your door. Fast delivery, fresh ingredients, consistent taste. Order now.">
+<meta name="keywords" content="cloud kitchen pune, food delivery pune, online food order pune, home delivery restaurant pune">
+<meta property="og:title" content="Biryani House — Authentic Dum Biryani | Pune">
+<meta property="og:description" content="Cloud kitchen in Pune. Restaurant-quality food delivered to your door. Fast delivery, fresh ingredients, consistent taste. Order now.">
+<meta property="og:type" content="website">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  :root { --red: #C0392B; --gold: #D4AC0D; --cream: #FDF8EF; --dark: #1A1008; --text: #2C2418; --warm: #8B5E3C; }
-  body { font-family: Georgia, 'Times New Roman', serif; background: var(--cream); color: var(--text); }
+  :root { --saffron: #FF6B00; --gold: #FFB300; --dark: #1A0A00; --cream: #FFF8F0; --brown: #7B3F00; --text: #2C1500; }
+  body { font-family: 'Segoe UI', sans-serif; background: var(--cream); color: var(--text); }
   nav { background: var(--dark); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
-  .logo { color: var(--gold); font-size: 1.8rem; font-weight: 400; letter-spacing: 2px; font-style: italic; }
-  nav a { color: rgba(255,255,255,0.8); text-decoration: none; margin-left: 1.5rem; font-size: 0.9rem; font-family: 'Segoe UI', sans-serif; letter-spacing: 1px; text-transform: uppercase; }
+  .logo { color: var(--gold); font-size: 1.7rem; font-weight: 800; }
+  .logo span { color: var(--saffron); }
+  nav a { color: rgba(255,255,255,0.8); text-decoration: none; margin-left: 1.5rem; font-size: 0.9rem; }
   nav a:hover { color: var(--gold); }
-  .nav-res { background: var(--red); color: white !important; padding: 0.5rem 1.3rem; border-radius: 4px; }
+  .nav-order { background: var(--saffron); color: white !important; padding: 0.5rem 1.3rem; border-radius: 6px; font-weight: 700; }
 
-  .hero { background: var(--dark); min-height: 90vh; display: flex; align-items: center; position: relative; overflow: hidden; }
-  .hero-bg { position: absolute; inset: 0; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><circle cx="50" cy="50" r="40" fill="none" stroke="%23ffffff05" stroke-width="1"/></svg>') repeat; }
-  .hero-content { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; position: relative; z-index: 1; }
-  .hero-text { }
-  .hero-tag { color: var(--gold); font-size: 0.85rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 1rem; font-family: 'Segoe UI', sans-serif; }
-  .hero-text h1 { color: white; font-size: 3.5rem; font-weight: 400; line-height: 1.2; margin-bottom: 1.5rem; }
-  .hero-text h1 em { color: var(--gold); font-style: italic; }
-  .hero-text p { color: rgba(255,255,255,0.75); font-size: 1.05rem; line-height: 1.9; margin-bottom: 2rem; font-family: 'Segoe UI', sans-serif; }
-  .hero-btns { display: flex; gap: 1rem; }
-  .btn-gold { background: var(--gold); color: var(--dark); padding: 0.9rem 2.2rem; font-size: 0.9rem; text-decoration: none; letter-spacing: 1px; text-transform: uppercase; font-family: 'Segoe UI', sans-serif; font-weight: 600; }
-  .btn-ghost { border: 1px solid rgba(255,255,255,0.4); color: white; padding: 0.9rem 2.2rem; font-size: 0.9rem; text-decoration: none; letter-spacing: 1px; text-transform: uppercase; font-family: 'Segoe UI', sans-serif; }
-  .hero-info { background: rgba(255,255,255,0.05); border: 1px solid rgba(212,172,13,0.3); padding: 2rem; }
-  .info-row { display: flex; justify-content: space-between; padding: 0.8rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-family: 'Segoe UI', sans-serif; font-size: 0.9rem; }
-  .info-row:last-child { border-bottom: none; }
-  .info-row span:first-child { color: rgba(255,255,255,0.6); }
-  .info-row span:last-child { color: var(--gold); font-weight: 600; }
+  .hero { background: linear-gradient(135deg, var(--dark) 0%, #3D1500 50%, #5C2A00 100%); min-height: 85vh; display: flex; align-items: center; padding: 4rem 2rem; position: relative; overflow: hidden; }
+  .hero::after { content: '🍛'; position: absolute; right: 5%; top: 50%; transform: translateY(-50%); font-size: 16rem; opacity: 0.06; }
+  .hero-content { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; position: relative; z-index: 1; }
+  .hero-label { background: rgba(255,179,0,0.2); border: 1px solid rgba(255,179,0,0.5); color: var(--gold); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; display: inline-block; margin-bottom: 1rem; }
+  .hero-text h1 { color: white; font-size: 3.2rem; font-weight: 900; line-height: 1.15; margin-bottom: 1rem; }
+  .hero-text h1 span { color: var(--saffron); }
+  .hero-text p { color: rgba(255,255,255,0.8); font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem; }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-saffron { background: var(--saffron); color: white; padding: 0.9rem 2rem; border-radius: 8px; font-weight: 700; text-decoration: none; }
+  .btn-outline { border: 2px solid rgba(255,255,255,0.5); color: white; padding: 0.9rem 2rem; border-radius: 8px; font-weight: 700; text-decoration: none; }
+  .hero-right { }
+  .biryani-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,179,0,0.25); border-radius: 16px; padding: 1.8rem; margin-bottom: 1rem; }
+  .biryani-card h3 { color: var(--gold); font-size: 1rem; margin-bottom: 1rem; }
+  .variant { display: flex; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.85); font-size: 0.9rem; }
+  .variant:last-child { border-bottom: none; }
+  .variant-price { color: var(--saffron); font-weight: 700; }
 
-  .tagline-bar { background: var(--red); padding: 0.8rem 2rem; text-align: center; }
-  .tagline-bar p { color: white; font-size: 0.9rem; letter-spacing: 1px; font-family: 'Segoe UI', sans-serif; }
+  .proof { background: var(--saffron); padding: 1.2rem 2rem; }
+  .proof-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1rem; }
+  .proof-stat { text-align: center; color: white; }
+  .proof-stat strong { display: block; font-size: 1.8rem; }
+  .proof-stat span { font-size: 0.85rem; opacity: 0.9; }
 
   section { padding: 5rem 2rem; }
   .container { max-width: 1100px; margin: 0 auto; }
-  .section-tag { color: var(--red); font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 0.5rem; font-family: 'Segoe UI', sans-serif; }
-  h2 { font-size: 2.5rem; font-weight: 400; color: var(--dark); margin-bottom: 0.5rem; }
-  .subtitle { color: #888; margin-bottom: 3rem; font-size: 1rem; font-family: 'Segoe UI', sans-serif; }
+  h2 { font-size: 2.2rem; font-weight: 800; color: var(--dark); margin-bottom: 0.5rem; }
+  .subtitle { color: #777; margin-bottom: 3rem; font-size: 1rem; }
+  .section-accent { color: var(--saffron); font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
 
-  .menu-categories { display: flex; gap: 0.8rem; margin-bottom: 2rem; flex-wrap: wrap; }
-  .cat-btn { background: transparent; border: 1px solid #ddd; padding: 0.5rem 1.2rem; cursor: pointer; font-family: 'Segoe UI', sans-serif; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; color: #888; }
-  .cat-btn.active { background: var(--dark); color: white; border-color: var(--dark); }
-  .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0; border: 1px solid #e8e0d4; }
-  .menu-item { padding: 1.5rem; border-bottom: 1px solid #e8e0d4; border-right: 1px solid #e8e0d4; }
-  .menu-item:nth-child(2n) { border-right: none; }
-  .menu-item-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; }
-  .menu-item h3 { font-size: 1.05rem; color: var(--dark); font-weight: 400; }
-  .menu-price { color: var(--red); font-weight: 700; font-family: 'Segoe UI', sans-serif; }
-  .menu-item p { color: #777; font-size: 0.85rem; line-height: 1.6; font-family: 'Segoe UI', sans-serif; }
-  .veg-dot { width: 10px; height: 10px; background: green; border-radius: 50%; display: inline-block; margin-left: 0.5rem; }
-  .nonveg-dot { width: 10px; height: 10px; background: var(--red); border-radius: 50%; display: inline-block; margin-left: 0.5rem; }
+  .menu-section { background: white; }
+  .menu-tabs { display: flex; gap: 0; border-bottom: 2px solid #f0e0cc; margin-bottom: 2rem; overflow-x: auto; }
+  .tab { padding: 0.8rem 1.5rem; cursor: pointer; font-size: 0.9rem; font-weight: 600; color: #888; white-space: nowrap; border-bottom: 2px solid transparent; margin-bottom: -2px; }
+  .tab.active { color: var(--saffron); border-bottom-color: var(--saffron); }
+  .dish-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+  .dish-card { border: 1px solid #f0e0cc; border-radius: 12px; overflow: hidden; transition: box-shadow 0.2s; }
+  .dish-card:hover { box-shadow: 0 8px 30px rgba(255,107,0,0.12); }
+  .dish-img { height: 150px; display: flex; align-items: center; justify-content: center; font-size: 5rem; }
+  .dish-img.bg1 { background: linear-gradient(135deg, #fff3e0, #ffcc80); }
+  .dish-img.bg2 { background: linear-gradient(135deg, #fbe9e7, #ff8a65); }
+  .dish-img.bg3 { background: linear-gradient(135deg, #f3e5f5, #ce93d8); }
+  .dish-img.bg4 { background: linear-gradient(135deg, #e8f5e9, #a5d6a7); }
+  .dish-info { padding: 1.2rem; }
+  .dish-info h3 { color: var(--dark); margin-bottom: 0.3rem; font-size: 1rem; }
+  .dish-info p { color: #888; font-size: 0.83rem; line-height: 1.5; margin-bottom: 0.8rem; }
+  .dish-footer { display: flex; justify-content: space-between; align-items: center; }
+  .dish-price { color: var(--saffron); font-weight: 800; font-size: 1.1rem; }
+  .spice-tag { font-size: 0.75rem; }
 
-  .ambiance { background: var(--dark); padding: 5rem 2rem; }
-  .ambiance h2 { color: white; }
-  .ambiance .section-tag { color: var(--gold); }
-  .ambiance .subtitle { color: rgba(255,255,255,0.6); }
-  .amb-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1px; background: rgba(255,255,255,0.1); }
-  .amb-item { background: var(--dark); padding: 2rem; text-align: center; }
-  .amb-icon { font-size: 2.5rem; margin-bottom: 1rem; }
-  .amb-item h3 { color: var(--gold); font-size: 1rem; margin-bottom: 0.5rem; font-weight: 400; }
-  .amb-item p { color: rgba(255,255,255,0.6); font-size: 0.85rem; line-height: 1.6; font-family: 'Segoe UI', sans-serif; }
+  .legacy { background: var(--dark); padding: 5rem 2rem; }
+  .legacy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .legacy h2 { color: white; }
+  .legacy .subtitle { color: rgba(255,255,255,0.6); }
+  .legacy p { color: rgba(255,255,255,0.75); line-height: 1.9; margin-bottom: 1rem; }
+  .legacy-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
+  .leg-stat { background: rgba(255,255,255,0.06); padding: 1.2rem; border-radius: 12px; text-align: center; }
+  .leg-stat strong { display: block; color: var(--gold); font-size: 1.8rem; }
+  .leg-stat span { color: rgba(255,255,255,0.6); font-size: 0.85rem; }
+  .process-steps { }
+  .step { display: flex; gap: 1rem; margin-bottom: 1.5rem; }
+  .step-num { width: 40px; height: 40px; background: var(--saffron); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; flex-shrink: 0; }
+  .step-content h3 { color: white; margin-bottom: 0.3rem; }
+  .step-content p { color: rgba(255,255,255,0.6); font-size: 0.9rem; line-height: 1.6; }
 
-  .reviews { background: #FAF7F2; }
-  .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-  .review-card { background: white; padding: 2rem; border-left: 3px solid var(--gold); }
-  .stars { color: var(--gold); margin-bottom: 0.8rem; letter-spacing: 2px; }
-  .review-card p { color: #555; line-height: 1.8; margin-bottom: 1.2rem; font-size: 0.95rem; }
-  .reviewer { font-family: 'Segoe UI', sans-serif; }
+  .reviews { background: #FFF4E8; }
+  .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+  .review-card { background: white; padding: 1.8rem; border-radius: 12px; border-top: 3px solid var(--saffron); }
+  .stars { color: var(--gold); font-size: 1.1rem; margin-bottom: 0.8rem; }
+  .review-card p { color: #555; line-height: 1.7; margin-bottom: 1rem; font-size: 0.93rem; font-style: italic; }
   .reviewer strong { color: var(--dark); font-size: 0.9rem; }
-  .reviewer span { color: #aaa; font-size: 0.8rem; display: block; }
+  .reviewer span { color: #aaa; font-size: 0.8rem; }
 
-  .reserve { background: linear-gradient(135deg, var(--dark), #3D1A0A); padding: 5rem 2rem; text-align: center; }
-  .reserve h2 { color: white; font-size: 2.8rem; }
-  .reserve p { color: rgba(255,255,255,0.7); margin: 1rem 0 2rem; font-family: 'Segoe UI', sans-serif; }
-  .res-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .order-cta { background: linear-gradient(135deg, var(--saffron), var(--brown)); padding: 5rem 2rem; text-align: center; }
+  .order-cta h2 { color: white; font-size: 2.5rem; }
+  .order-cta p { color: rgba(255,255,255,0.85); margin: 1rem 0 2rem; font-size: 1.1rem; }
+  .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .btn-white { background: white; color: var(--saffron); padding: 1rem 2.5rem; border-radius: 8px; font-weight: 800; text-decoration: none; font-size: 1rem; }
+  .btn-dark { background: var(--dark); color: white; padding: 1rem 2.5rem; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 1rem; }
 
-  footer { background: #0D0805; color: rgba(255,255,255,0.5); padding: 2.5rem 2rem; text-align: center; font-family: 'Segoe UI', sans-serif; font-size: 0.85rem; }
-  footer strong { color: var(--gold); display: block; margin-bottom: 0.5rem; font-size: 1rem; }
-  @media(max-width: 768px) { .hero-content { grid-template-columns: 1fr; } .hero-text h1 { font-size: 2.5rem; } }
+  footer { background: var(--dark); color: rgba(255,255,255,0.5); padding: 3rem 2rem; text-align: center; }
+  footer strong { color: var(--gold); display: block; margin-bottom: 0.5rem; font-size: 1.1rem; }
+
+  @media(max-width:768px) { .hero-content, .legacy-grid { grid-template-columns: 1fr; gap: 2rem; } .hero::after { display: none; } }
 </style>
+
+<link rel="canonical" href="https://biryanihousepune.in/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=1200&h=630&fit=crop">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Biryani House",
+  "description": "Authentic Hyderabadi Dum Biryani Restaurant in Pune",
+  "url": "https://biryanihousepune.in/",
+  "telephone": "+919876543210",
+  "email": "orders@biryanihouse.in",
+  "servesCuisine": "Biryani, Hyderabadi, Mughlai, Kebabs",
+  "priceRange": "₹₹",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Camp Area, MG Road",
+    "addressLocality": "Camp, Pune",
+    "addressRegion": "Maharashtra",
+    "postalCode": "411001",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "18.5162",
+    "longitude": "73.8760"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "bestRating": "5",
+    "ratingCount": "8200"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Mo-Su"
+      ],
+      "opens": "11:30",
+      "closes": "23:00"
+    }
+  ],
+  "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=1200&h=630&fit=crop",
+  "acceptsReservations": "True"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What types of biryani does Biryani House serve in Pune?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Biryani House serves 12 varieties of authentic dum biryani — Chicken, Mutton, Veg, Egg, Prawn, and more in Hyderabadi, Lucknowi, and Kolkata styles. All biryanis are slow-cooked for 3 hours with 12-hour marinated meat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes Biryani House biryani special compared to others?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every biryani is slow-cooked (dum) for 3 hours in sealed handis using 2-year aged basmati rice, hand-ground spices, genuine Kashmir saffron, and 12-hour marinated meat. No shortcuts, no pre-cooking — authentic dum since 2009."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Biryani House deliver across Pune?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, all 5 Pune outlets deliver via Swiggy, Zomato, and direct orders. Family packs serve 4-6 people. Bulk catering for 25+ people available with advance booking. Call +91 98765 99999 for events."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does biryani cost at Biryani House Pune?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chicken Dum Biryani starts at ₹220 (half) / ₹380 (full). Mutton starts at ₹299 (half) / ₹520 (full). A meal for two with biryani, kebabs, and drinks costs ₹500-₹900. Great value for authentic dum biryani."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are Biryani House outlets in Pune?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Biryani House has 5 outlets across Pune — Camp (MG Road), Kothrud, Baner, Hinjewadi, and Viman Nagar. All open daily 11:30 AM to 11 PM. Dine-in with rustic ambiance and ample parking at all locations."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
+
 <nav>
-  <div class="logo">Café Milano</div>
+  <div class="logo">Biryani<span>House</span></div>
   <div>
     <a href="#menu">Menu</a>
-    <a href="#ambiance">Experience</a>
-    <a href="#reserve" class="nav-res">Reserve Table</a>
+    <a href="#legacy">Our Story</a>
+    <a href="#order" class="nav-order">Order Now</a>
   </div>
 </nav>
 
 <section class="hero">
-  <div class="hero-bg"></div>
   <div class="hero-content">
     <div class="hero-text">
-      <div class="hero-tag">Est. 2018 · Koregaon Park, Pune</div>
-      <h1>Authentic Italian,<br><em>Crafted With Love</em></h1>
-      <p>From hand-tossed Neapolitan pizzas to slow-braised ossobuco, every dish at Café Milano is a love letter to Italian tradition — served in the heart of Pune.</p>
+      <span class="hero-label">🏆 Pune's #1 Dum Biryani Since 2009</span>
+      <h1>Slow-Cooked.<br><span>Saffron-Kissed.</span><br>Unforgettable.</h1>
+      <p>Authentic Hyderabadi dum biryani, sealed and slow-cooked for 3 hours with hand-ground spices. Not fast food — real food, made the right way.</p>
       <div class="hero-btns">
-        <a href="#reserve" class="btn-gold">Reserve a Table</a>
-        <a href="#menu" class="btn-ghost">View Menu</a>
+        <a href="#order" class="btn-saffron">Order Online</a>
+        <a href="#menu" class="btn-outline">View Full Menu</a>
       </div>
     </div>
-    <div class="hero-info">
-      <div class="info-row"><span>📍 Location</span><span>Koregaon Park, Lane 5</span></div>
-      <div class="info-row"><span>🕐 Lunch</span><span>12:00 PM – 3:30 PM</span></div>
-      <div class="info-row"><span>🌙 Dinner</span><span>7:00 PM – 11:30 PM</span></div>
-      <div class="info-row"><span>🌐 Sunday Brunch</span><span>11:00 AM – 4:00 PM</span></div>
-      <div class="info-row"><span>⭐ Rating</span><span>4.7 on Zomato</span></div>
-      <div class="info-row"><span>💺 Covers</span><span>80 Indoor · 30 Terrace</span></div>
+    <div class="hero-right">
+      <div class="biryani-card">
+        <h3>🍛 Signature Dum Biryani — Sizes</h3>
+        <div class="variant"><span>Chicken Dum Biryani · Half</span><span class="variant-price">₹220</span></div>
+        <div class="variant"><span>Chicken Dum Biryani · Full</span><span class="variant-price">₹380</span></div>
+        <div class="variant"><span>Mutton Dum Biryani · Half</span><span class="variant-price">₹299</span></div>
+        <div class="variant"><span>Mutton Dum Biryani · Full</span><span class="variant-price">₹520</span></div>
+        <div class="variant"><span>Veg Dum Biryani · Full</span><span class="variant-price">₹260</span></div>
+      </div>
+      <div class="biryani-card">
+        <h3>⏱️ Dum Cooking Process</h3>
+        <div class="variant"><span>Marination</span><span class="variant-price">12 hours</span></div>
+        <div class="variant"><span>Dum slow-cook</span><span class="variant-price">3 hours</span></div>
+        <div class="variant"><span>Saffron infusion</span><span class="variant-price">Kesar imported</span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<div class="tagline-bar">
-  <p>🍕 Authentic wood-fired pizza · 🍝 Handmade pasta · 🍷 Curated Italian wine list · 🎶 Live music every Friday</p>
+<div class="proof">
+  <div class="proof-inner">
+    <div class="proof-stat"><strong>15 Yrs</strong><span>Since 2009</span></div>
+    <div class="proof-stat"><strong>3,200+</strong><span>Daily Orders</span></div>
+    <div class="proof-stat"><strong>4.9★</strong><span>Zomato Rating</span></div>
+    <div class="proof-stat"><strong>5 Outlets</strong><span>Across Pune</span></div>
+    <div class="proof-stat"><strong>12 Varieties</strong><span>Of Biryani</span></div>
+  </div>
 </div>
 
-<section id="menu">
+<section id="menu" class="menu-section">
   <div class="container">
-    <div class="section-tag">Our Menu</div>
-    <h2>From Naples to Pune</h2>
-    <p class="subtitle">All pastas are handmade in-house. All pizzas are wood-fired at 450°C.</p>
-    <div class="menu-categories">
-      <button class="cat-btn active">All</button>
-      <button class="cat-btn">Antipasti</button>
-      <button class="cat-btn">Pasta</button>
-      <button class="cat-btn">Pizza</button>
-      <button class="cat-btn">Mains</button>
-      <button class="cat-btn">Desserts</button>
+    <span class="section-accent">What We Serve</span>
+    <h2>The Full Menu</h2>
+    <p class="subtitle">Biryanis, kebabs, curries, and desserts — all made in-house</p>
+    <div class="menu-tabs">
+      <div class="tab active">Biryani</div>
+      <div class="tab">Kebabs</div>
+      <div class="tab">Curries</div>
+      <div class="tab">Breads</div>
+      <div class="tab">Desserts</div>
     </div>
-    <div class="menu-grid">
-      <div class="menu-item">
-        <div class="menu-item-header">
-          <h3>Bruschetta al Pomodoro <span class="veg-dot"></span></h3>
-          <span class="menu-price">₹280</span>
+    <div class="dish-grid">
+      <div class="dish-card">
+        <div class="dish-img bg1">🍛</div>
+        <div class="dish-info">
+          <h3>Chicken Dum Biryani</h3>
+          <p>Basmati rice, 12hr marinated chicken, saffron, fried onions, fresh mint. Our bestseller since day 1.</p>
+          <div class="dish-footer"><span class="dish-price">₹380</span><span class="spice-tag">🌶🌶 Medium</span></div>
         </div>
-        <p>Charred sourdough, heirloom tomatoes, fresh basil, extra-virgin olive oil, fleur de sel</p>
       </div>
-      <div class="menu-item">
-        <div class="menu-item-header">
-          <h3>Burrata & Prosciutto <span class="nonveg-dot"></span></h3>
-          <span class="menu-price">₹520</span>
+      <div class="dish-card">
+        <div class="dish-img bg2">🥩</div>
+        <div class="dish-info">
+          <h3>Mutton Dum Biryani</h3>
+          <p>Tender mutton slow-cooked in aromatic spices, aged basmati, rose water, kewra essence.</p>
+          <div class="dish-footer"><span class="dish-price">₹520</span><span class="spice-tag">🌶🌶🌶 Spicy</span></div>
         </div>
-        <p>Imported burrata, Parma ham, arugula, balsamic reduction, truffle honey</p>
       </div>
-      <div class="menu-item">
-        <div class="menu-item-header">
-          <h3>Tagliatelle al Ragù <span class="nonveg-dot"></span></h3>
-          <span class="menu-price">₹540</span>
+      <div class="dish-card">
+        <div class="dish-img bg4">🥦</div>
+        <div class="dish-info">
+          <h3>Veg Dum Biryani</h3>
+          <p>Garden vegetables, paneer, cashews, saffron-infused basmati. Rich and aromatic.</p>
+          <div class="dish-footer"><span class="dish-price">₹260</span><span class="spice-tag">🌶 Mild</span></div>
         </div>
-        <p>Handmade egg pasta, slow-braised beef ragù, 6-hour Bolognese sauce, Parmigiano Reggiano</p>
       </div>
-      <div class="menu-item">
-        <div class="menu-item-header">
-          <h3>Cacio e Pepe <span class="veg-dot"></span></h3>
-          <span class="menu-price">₹420</span>
+      <div class="dish-card">
+        <div class="dish-img bg3">🍤</div>
+        <div class="dish-info">
+          <h3>Prawn Biryani (Special)</h3>
+          <p>Tiger prawns, coastal masala, curry leaves, long grain basmati. Weekend special only.</p>
+          <div class="dish-footer"><span class="dish-price">₹620</span><span class="spice-tag">🌶🌶 Medium</span></div>
         </div>
-        <p>Tonnarelli pasta, Pecorino Romano, aged Parmigiano, toasted black pepper — a Roman classic</p>
-      </div>
-      <div class="menu-item">
-        <div class="menu-item-header">
-          <h3>Margherita DOC <span class="veg-dot"></span></h3>
-          <span class="menu-price">₹480</span>
-        </div>
-        <p>San Marzano DOP tomatoes, Fior di Latte, fresh basil, wood-fired at 450°C</p>
-      </div>
-      <div class="menu-item">
-        <div class="menu-item-header">
-          <h3>Diavola <span class="nonveg-dot"></span></h3>
-          <span class="menu-price">₹560</span>
-        </div>
-        <p>Spicy salami piccante, mozzarella, tomato, Calabrian chilli, fresh oregano</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="ambiance" id="ambiance">
+<section class="legacy" id="legacy">
   <div class="container">
-    <div class="section-tag">The Experience</div>
-    <h2>More Than a Meal</h2>
-    <p class="subtitle">Every visit to Café Milano is an occasion</p>
-    <div class="amb-grid">
-      <div class="amb-item">
-        <div class="amb-icon">🏛️</div>
-        <h3>Elegant Interiors</h3>
-        <p>Travertine marble, soft lighting, handpainted murals. A slice of Florence in Pune.</p>
+    <div class="legacy-grid">
+      <div>
+        <h2>15 Years of Dum</h2>
+        <p class="subtitle" style="color: rgba(255,255,255,0.5);">A family recipe. A Pune institution.</p>
+        <p>Biryani House was founded in 2009 by Imran Siddiqui, whose family brought the original Hyderabadi dum recipe from the kitchens of the Nizam. Every batch is made the same way it was made in 1985.</p>
+        <p>We use only aged Basmati (minimum 2 years), fresh spices ground every morning, and genuine saffron imported from Kashmir. There are no shortcuts. There never will be.</p>
+        <div class="legacy-stats">
+          <div class="leg-stat"><strong>15</strong><span>Years in Business</span></div>
+          <div class="leg-stat"><strong>5</strong><span>Pune Outlets</span></div>
+          <div class="leg-stat"><strong>12h</strong><span>Marination Time</span></div>
+          <div class="leg-stat"><strong>3h</strong><span>Dum Cook Time</span></div>
+        </div>
       </div>
-      <div class="amb-item">
-        <div class="amb-icon">🍷</div>
-        <h3>Italian Wine Cellar</h3>
-        <p>70+ labels from Tuscany, Piedmont, and Sicily. Sommelier-curated pairings available.</p>
-      </div>
-      <div class="amb-item">
-        <div class="amb-icon">🎶</div>
-        <h3>Live Jazz Fridays</h3>
-        <p>Every Friday evening, 8 PM. Reservations recommended for live music nights.</p>
-      </div>
-      <div class="amb-item">
-        <div class="amb-icon">🎂</div>
-        <h3>Private Dining</h3>
-        <p>Intimate private dining room for 12. Perfect for anniversaries, proposals, and corporate dinners.</p>
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h3>12-Hour Marination</h3>
+            <p>Meat marinated overnight in yogurt, freshly ground spices, and herbs. Never less than 12 hours.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h3>Aged Basmati Selection</h3>
+            <p>We use only 2-year aged Basmati from Punjab. The aging gives it the signature length and aroma.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h3>Sealed Dum Cooking</h3>
+            <p>Pot sealed with dough, cooked on dum (low heat) for 3 hours. Steam stays in, flavour concentrates.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h3>Saffron Finishing</h3>
+            <p>Kashmir Kesar dissolved in warm milk, drizzled over the top layer just before serving.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -211,46 +350,102 @@
 
 <section class="reviews">
   <div class="container">
-    <div class="section-tag">Guest Stories</div>
-    <h2>What Our Guests Say</h2>
-    <p class="subtitle">From date nights to anniversary dinners</p>
+    <span class="section-accent">Guest Reviews</span>
+    <h2>What Pune Says</h2>
+    <p class="subtitle">Over 8,000 reviews on Zomato and Google</p>
     <div class="review-grid">
       <div class="review-card">
         <div class="stars">★★★★★</div>
-        <p>"Proposed to my girlfriend here on a Friday jazz night. The ambiance was perfect, the food was extraordinary. The staff helped arrange the surprise — they were impeccable."</p>
-        <div class="reviewer"><strong>Vikram Nair</strong><span>Anniversary Dinner · Koregaon Park</span></div>
+        <p>"I've eaten biryani all over India. This is genuinely the best chicken biryani I've had outside Hyderabad. The meat is so tender and the rice is perfectly layered. No shortcuts here."</p>
+        <div class="reviewer"><strong>Amit Verma</strong><span>Food Critic · Pune Mirror</span></div>
       </div>
       <div class="review-card">
         <div class="stars">★★★★★</div>
-        <p>"The Cacio e Pepe is the best I've had outside Rome — and I've eaten in Rome. The pasta is genuinely handmade. This is what Italian food in India should taste like."</p>
-        <div class="reviewer"><strong>Meera Krishnan</strong><span>Food Blogger · Pune</span></div>
+        <p>"We order every Friday for our family of 8. The full mutton biryani feeds 4 adults comfortably and the taste is consistent EVERY time. In 6 years, never a bad order."</p>
+        <div class="reviewer"><strong>Fatima Sheikh</strong><span>Regular Customer · Kothrud</span></div>
       </div>
       <div class="review-card">
         <div class="stars">★★★★★</div>
-        <p>"Brought international clients here for a business dinner. Everyone was impressed. The burrata was a showstopper. Closed the deal over tiramisu. Café Milano is my secret weapon."</p>
-        <div class="reviewer"><strong>Deepak Mehta</strong><span>Corporate Client · Bund Garden</span></div>
+        <p>"Ordered 50 family meals for our office Eid celebration. Delivered hot, on time, beautifully packed. Every colleague asked for the number. Best bulk order experience ever."</p>
+        <div class="reviewer"><strong>Sameer Qureshi</strong><span>Corporate Order · Hinjewadi</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="reserve" id="reserve">
+<section class="order-cta" id="order">
   <div class="container">
-    <h2>Reserve Your Table</h2>
-    <p>For special occasions, private dining, or a spontaneous weeknight escape</p>
-    <div class="res-btns">
-      <a href="tel:+912012345678" class="btn-gold">📞 Call to Reserve</a>
-      <a href="#" class="btn-ghost" style="border-color: rgba(255,255,255,0.4); color: white;">💬 WhatsApp Us</a>
+    <h2>🍛 Order Your Biryani Now</h2>
+    <p>Home delivery · Dine-in · Bulk orders for events & corporates</p>
+    <div class="cta-btns">
+      <a href="tel:+919876543210" class="btn-white">📞 Call to Order</a>
+      <a href="#" class="btn-dark">🛵 Order on Swiggy</a>
     </div>
-    <p style="margin-top: 1.5rem; color: rgba(255,255,255,0.5); font-family: 'Segoe UI', sans-serif; font-size: 0.85rem;">📍 Lane 5, Koregaon Park, Pune 411001 · Valet Parking Available</p>
+    <p style="margin-top: 1.5rem; color: rgba(255,255,255,0.6); font-size: 0.9rem;">📍 5 locations across Pune · Open 11 AM – 11:30 PM · Bulk orders: +91 98765 99999</p>
+  </div>
+</section>
+
+
+
+
+<!-- FAQ SECTION — SEO Enhanced -->
+<section id="faq" style="padding: 80px 5%; max-width: 900px; margin: 0 auto;">
+  <div style="text-align:center; margin-bottom: 48px;">
+    <span style="font-size: 0.75rem; letter-spacing: 4px; text-transform: uppercase; color: #FF6B00; display: block; margin-bottom: 12px; font-family: 'Segoe UI', Arial, sans-serif;">FAQ</span>
+    <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 12px; color: #FFF8F0;">Frequently Asked Questions</h2>
+    <div style="width: 50px; height: 2px; background: #FF6B00; margin: 0 auto 16px;"></div>
+    <p style="color: #8a7060; font-size: 0.95rem; font-family: 'Segoe UI', Arial, sans-serif;">Everything you need to know about Biryani House</p>
+  </div>
+  <div style="display:flex; flex-direction:column; gap: 10px;">
+
+    <details style="background: rgba(255,107,0,0.06); border: 1px solid rgba(255,107,0,0.2); border-radius: 10px; overflow: hidden; transition: border-color 0.3s;">
+      <summary style="padding: 18px 20px; font-weight: 600; font-size: 0.95rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: #FFF8F0; font-family: 'Segoe UI', Arial, sans-serif;">
+        What types of biryani does Biryani House serve in Pune?
+        <span style="font-size: 1.2rem; color: #FF6B00; margin-left: 12px; flex-shrink:0; transition: transform 0.3s;">+</span>
+      </summary>
+      <div style="padding: 0 20px 18px; font-size: 0.9rem; color: #8a7060; line-height: 1.7; font-family: 'Segoe UI', Arial, sans-serif;">Biryani House serves 12 varieties of authentic dum biryani — Chicken, Mutton, Veg, Egg, Prawn, and more in Hyderabadi, Lucknowi, and Kolkata styles. All biryanis are slow-cooked for 3 hours with 12-hour marinated meat.</div>
+    </details>
+
+    <details style="background: rgba(255,107,0,0.06); border: 1px solid rgba(255,107,0,0.2); border-radius: 10px; overflow: hidden; transition: border-color 0.3s;">
+      <summary style="padding: 18px 20px; font-weight: 600; font-size: 0.95rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: #FFF8F0; font-family: 'Segoe UI', Arial, sans-serif;">
+        What makes Biryani House biryani special compared to others?
+        <span style="font-size: 1.2rem; color: #FF6B00; margin-left: 12px; flex-shrink:0; transition: transform 0.3s;">+</span>
+      </summary>
+      <div style="padding: 0 20px 18px; font-size: 0.9rem; color: #8a7060; line-height: 1.7; font-family: 'Segoe UI', Arial, sans-serif;">Every biryani is slow-cooked (dum) for 3 hours in sealed handis using 2-year aged basmati rice, hand-ground spices, genuine Kashmir saffron, and 12-hour marinated meat. No shortcuts, no pre-cooking — authentic dum since 2009.</div>
+    </details>
+
+    <details style="background: rgba(255,107,0,0.06); border: 1px solid rgba(255,107,0,0.2); border-radius: 10px; overflow: hidden; transition: border-color 0.3s;">
+      <summary style="padding: 18px 20px; font-weight: 600; font-size: 0.95rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: #FFF8F0; font-family: 'Segoe UI', Arial, sans-serif;">
+        Does Biryani House deliver across Pune?
+        <span style="font-size: 1.2rem; color: #FF6B00; margin-left: 12px; flex-shrink:0; transition: transform 0.3s;">+</span>
+      </summary>
+      <div style="padding: 0 20px 18px; font-size: 0.9rem; color: #8a7060; line-height: 1.7; font-family: 'Segoe UI', Arial, sans-serif;">Yes, all 5 Pune outlets deliver via Swiggy, Zomato, and direct orders. Family packs serve 4-6 people. Bulk catering for 25+ people available with advance booking. Call +91 98765 99999 for events.</div>
+    </details>
+
+    <details style="background: rgba(255,107,0,0.06); border: 1px solid rgba(255,107,0,0.2); border-radius: 10px; overflow: hidden; transition: border-color 0.3s;">
+      <summary style="padding: 18px 20px; font-weight: 600; font-size: 0.95rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: #FFF8F0; font-family: 'Segoe UI', Arial, sans-serif;">
+        How much does biryani cost at Biryani House Pune?
+        <span style="font-size: 1.2rem; color: #FF6B00; margin-left: 12px; flex-shrink:0; transition: transform 0.3s;">+</span>
+      </summary>
+      <div style="padding: 0 20px 18px; font-size: 0.9rem; color: #8a7060; line-height: 1.7; font-family: 'Segoe UI', Arial, sans-serif;">Chicken Dum Biryani starts at ₹220 (half) / ₹380 (full). Mutton starts at ₹299 (half) / ₹520 (full). A meal for two with biryani, kebabs, and drinks costs ₹500-₹900. Great value for authentic dum biryani.</div>
+    </details>
+
+    <details style="background: rgba(255,107,0,0.06); border: 1px solid rgba(255,107,0,0.2); border-radius: 10px; overflow: hidden; transition: border-color 0.3s;">
+      <summary style="padding: 18px 20px; font-weight: 600; font-size: 0.95rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: #FFF8F0; font-family: 'Segoe UI', Arial, sans-serif;">
+        Where are Biryani House outlets in Pune?
+        <span style="font-size: 1.2rem; color: #FF6B00; margin-left: 12px; flex-shrink:0; transition: transform 0.3s;">+</span>
+      </summary>
+      <div style="padding: 0 20px 18px; font-size: 0.9rem; color: #8a7060; line-height: 1.7; font-family: 'Segoe UI', Arial, sans-serif;">Biryani House has 5 outlets across Pune — Camp (MG Road), Kothrud, Baner, Hinjewadi, and Viman Nagar. All open daily 11:30 AM to 11 PM. Dine-in with rustic ambiance and ample parking at all locations.</div>
+    </details>
   </div>
 </section>
 
 <footer>
-  <strong>Café Milano</strong>
-  <p>Koregaon Park, Pune · Lunch 12–3:30 · Dinner 7–11:30 · Closed Mondays</p>
-  <p>+91 20 1234 5678 · reservations@cafemilano.in</p>
-  <p style="margin-top: 1rem; opacity: 0.4;">Demo site by Invictus AI · invictus-ai.in</p>
+  <strong>Biryani House</strong>
+  <p>Pune's Dum Biryani Institution Since 2009 · 5 Locations</p>
+  <p>📞 +91 98765 43210 · orders@biryanihouse.in</p>
+  <p style="margin-top: 1rem; opacity: 0.4; font-size: 0.8rem;">Demo site by Invictus AI · invictus-ai.in</p>
 </footer>
+
 </body>
 </html>
