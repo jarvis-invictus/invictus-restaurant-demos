@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Green Bowl — Healthy Eats & Superfoods | Pune</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --green: #2D6A4F; --lime: #74C69D; --cream: #F8F3E8; --dark: #1B2B23;
+    --text: #2C3E2D; --accent: #52B788;
+  }
+  body { font-family: 'Segoe UI', sans-serif; background: var(--cream); color: var(--text); }
+  nav { background: var(--dark); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+  .logo { color: var(--lime); font-size: 1.6rem; font-weight: 800; letter-spacing: -0.5px; }
+  .logo span { color: white; }
+  nav a { color: rgba(255,255,255,0.85); text-decoration: none; margin-left: 1.5rem; font-size: 0.9rem; }
+  nav a:hover { color: var(--lime); }
+  .nav-cta { background: var(--accent); color: white !important; padding: 0.5rem 1.2rem; border-radius: 20px; font-weight: 600; }
+
+  .hero { background: linear-gradient(135deg, var(--dark) 0%, var(--green) 60%, #40916C 100%); min-height: 85vh; display: flex; align-items: center; padding: 4rem 2rem; position: relative; overflow: hidden; }
+  .hero::before { content: '🥗'; position: absolute; right: 8%; top: 20%; font-size: 12rem; opacity: 0.08; }
+  .hero-content { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .hero-text h1 { color: white; font-size: 3.2rem; font-weight: 900; line-height: 1.15; margin-bottom: 1.2rem; }
+  .hero-text h1 span { color: var(--lime); }
+  .hero-text p { color: rgba(255,255,255,0.85); font-size: 1.15rem; line-height: 1.7; margin-bottom: 2rem; }
+  .hero-badges { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 2rem; }
+  .badge { background: rgba(116,198,157,0.2); border: 1px solid var(--lime); color: var(--lime); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+  .hero-btns { display: flex; gap: 1rem; }
+  .btn-primary { background: var(--lime); color: var(--dark); padding: 0.9rem 2rem; border-radius: 30px; font-weight: 700; text-decoration: none; font-size: 1rem; }
+  .btn-outline { border: 2px solid white; color: white; padding: 0.9rem 2rem; border-radius: 30px; font-weight: 700; text-decoration: none; font-size: 1rem; }
+  .hero-card { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem; border: 1px solid rgba(255,255,255,0.2); }
+  .hero-card h3 { color: var(--lime); font-size: 1.1rem; margin-bottom: 1.2rem; }
+  .macro { display: flex; justify-content: space-between; align-items: center; padding: 0.7rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .macro:last-child { border-bottom: none; }
+  .macro span:first-child { color: white; font-size: 0.95rem; }
+  .macro span:last-child { color: var(--lime); font-weight: 700; font-size: 1rem; }
+
+  .proof { background: var(--green); padding: 1.2rem 2rem; }
+  .proof-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1rem; }
+  .proof-item { text-align: center; color: white; }
+  .proof-item strong { display: block; font-size: 1.8rem; color: var(--lime); }
+  .proof-item span { font-size: 0.85rem; opacity: 0.85; }
+
+  section { padding: 5rem 2rem; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  h2 { font-size: 2.2rem; font-weight: 800; color: var(--dark); margin-bottom: 0.5rem; }
+  .subtitle { color: #666; margin-bottom: 3rem; font-size: 1rem; }
+
+  .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+  .menu-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: transform 0.2s; }
+  .menu-card:hover { transform: translateY(-4px); }
+  .menu-img { height: 160px; display: flex; align-items: center; justify-content: center; font-size: 5rem; }
+  .menu-img.bg1 { background: linear-gradient(135deg, #d4f5e2, #a3d9b5); }
+  .menu-img.bg2 { background: linear-gradient(135deg, #fff3cd, #ffe082); }
+  .menu-img.bg3 { background: linear-gradient(135deg, #fce4ec, #f48fb1); }
+  .menu-img.bg4 { background: linear-gradient(135deg, #e1f5fe, #81d4fa); }
+  .menu-info { padding: 1.2rem; }
+  .menu-info h3 { font-size: 1.1rem; color: var(--dark); margin-bottom: 0.3rem; }
+  .menu-info p { font-size: 0.85rem; color: #777; margin-bottom: 0.8rem; line-height: 1.5; }
+  .menu-footer { display: flex; justify-content: space-between; align-items: center; }
+  .price { color: var(--green); font-weight: 700; font-size: 1.1rem; }
+  .cal-tag { background: #e8f5e9; color: var(--green); font-size: 0.75rem; padding: 0.25rem 0.6rem; border-radius: 10px; font-weight: 600; }
+
+  .features { background: #F0FAF4; }
+  .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+  .feature-card { background: white; padding: 1.8rem; border-radius: 16px; text-align: center; }
+  .feature-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+  .feature-card h3 { color: var(--dark); margin-bottom: 0.5rem; font-size: 1.05rem; }
+  .feature-card p { color: #777; font-size: 0.9rem; line-height: 1.6; }
+
+  .diet-section { background: var(--dark); padding: 5rem 2rem; }
+  .diet-section h2, .diet-section .subtitle { color: white; }
+  .diet-section .subtitle { color: rgba(255,255,255,0.7); }
+  .diet-pills { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+  .pill { background: rgba(116,198,157,0.15); border: 1px solid rgba(116,198,157,0.4); color: var(--lime); padding: 0.7rem 1.5rem; border-radius: 30px; font-size: 0.9rem; font-weight: 600; }
+
+  .testimonials { background: var(--cream); }
+  .test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+  .test-card { background: white; padding: 1.8rem; border-radius: 16px; box-shadow: 0 2px 15px rgba(0,0,0,0.06); }
+  .stars { color: #4CAF50; font-size: 1.2rem; margin-bottom: 0.8rem; }
+  .test-card p { color: #555; font-style: italic; line-height: 1.7; margin-bottom: 1rem; font-size: 0.95rem; }
+  .reviewer { display: flex; align-items: center; gap: 0.8rem; }
+  .avatar { width: 40px; height: 40px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; }
+  .reviewer-info strong { display: block; color: var(--dark); font-size: 0.9rem; }
+  .reviewer-info span { color: #999; font-size: 0.8rem; }
+
+  .order-section { background: linear-gradient(135deg, var(--green), var(--dark)); padding: 5rem 2rem; text-align: center; }
+  .order-section h2 { color: white; font-size: 2.5rem; }
+  .order-section p { color: rgba(255,255,255,0.85); margin: 1rem 0 2rem; font-size: 1.1rem; }
+  .order-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .btn-white { background: white; color: var(--green); padding: 1rem 2.5rem; border-radius: 30px; font-weight: 700; text-decoration: none; font-size: 1rem; }
+  .btn-lime { background: var(--lime); color: var(--dark); padding: 1rem 2.5rem; border-radius: 30px; font-weight: 700; text-decoration: none; font-size: 1rem; }
+
+  footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 3rem 2rem; text-align: center; }
+  footer strong { color: white; }
+  footer p { margin-bottom: 0.5rem; font-size: 0.9rem; }
+
+  @media (max-width: 768px) {
+    .hero-content { grid-template-columns: 1fr; gap: 2rem; }
+    .hero-text h1 { font-size: 2.2rem; }
+    .hero::before { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">The Green<span>Bowl</span></div>
+  <div>
+    <a href="#menu">Menu</a>
+    <a href="#plans">Meal Plans</a>
+    <a href="#order" class="nav-cta">Order Now</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badges">
+        <span class="badge">🌱 100% Plant-Based Options</span>
+        <span class="badge">📊 Macro-Tracked</span>
+        <span class="badge">🏆 Hygiene Rating A+</span>
+      </div>
+      <h1>Eat Clean,<br><span>Feel Strong.</span><br>Every Day.</h1>
+      <p>Pune's premium healthy food destination. Superfood bowls, protein meals, and detox juices — made fresh with zero preservatives, designed around your goals.</p>
+      <div class="hero-btns">
+        <a href="#order" class="btn-primary">Order Online</a>
+        <a href="#plans" class="btn-outline">View Meal Plans</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>⚡ Today's Power Bowl — Protein Fiesta</h3>
+      <div class="macro">
+        <span>🥩 Protein</span><span>38g</span>
+      </div>
+      <div class="macro">
+        <span>🌾 Carbs</span><span>42g</span>
+      </div>
+      <div class="macro">
+        <span>🥑 Good Fats</span><span>14g</span>
+      </div>
+      <div class="macro">
+        <span>🔥 Calories</span><span>448 kcal</span>
+      </div>
+      <div class="macro">
+        <span>🌿 Fibre</span><span>12g</span>
+      </div>
+      <div class="macro">
+        <span>⏱️ Ready in</span><span>8 min</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="proof">
+  <div class="proof-inner">
+    <div class="proof-item"><strong>2,400+</strong><span>Happy Customers</span></div>
+    <div class="proof-item"><strong>50+</strong><span>Menu Items</span></div>
+    <div class="proof-item"><strong>4.8★</strong><span>Zomato Rating</span></div>
+    <div class="proof-item"><strong>Zero</strong><span>Preservatives</span></div>
+    <div class="proof-item"><strong>3 Locations</strong><span>Koregaon Park · Baner · Viman Nagar</span></div>
+  </div>
+</div>
+
+<section id="menu">
+  <div class="container">
+    <h2>Our Signature Bowls</h2>
+    <p class="subtitle">Every bowl is macro-tracked, chef-crafted, and under ₹350</p>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <div class="menu-img bg1">🥗</div>
+        <div class="menu-info">
+          <h3>Protein Power Bowl</h3>
+          <p>Grilled chicken / paneer, quinoa, roasted broccoli, edamame, tahini drizzle</p>
+          <div class="menu-footer">
+            <span class="price">₹299</span>
+            <span class="cal-tag">448 kcal · 38g protein</span>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-img bg2">🌾</div>
+        <div class="menu-info">
+          <h3>Buddha Bliss Bowl</h3>
+          <p>Brown rice, roasted veggies, avocado, chickpeas, miso-ginger dressing</p>
+          <div class="menu-footer">
+            <span class="price">₹279</span>
+            <span class="cal-tag">380 kcal · Vegan ✓</span>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-img bg3">🍓</div>
+        <div class="menu-info">
+          <h3>Acai Detox Bowl</h3>
+          <p>Acai base, mixed berries, banana, granola, chia seeds, honey drizzle</p>
+          <div class="menu-footer">
+            <span class="price">₹259</span>
+            <span class="cal-tag">310 kcal · Antioxidant++</span>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-img bg4">🥤</div>
+        <div class="menu-info">
+          <h3>Green Goddess Smoothie</h3>
+          <p>Spinach, banana, almond milk, spirulina, hemp protein, almond butter</p>
+          <div class="menu-footer">
+            <span class="price">₹199</span>
+            <span class="cal-tag">280 kcal · 22g protein</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="container">
+    <h2>Why We're Different</h2>
+    <p class="subtitle">Clean food that actually tastes good</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🔬</div>
+        <h3>Macro-Calculated</h3>
+        <p>Every item shows exact protein, carbs, fat, and calories. No guessing. Track your goals precisely.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌿</div>
+        <h3>Zero Preservatives</h3>
+        <p>Fresh ingredients daily. No MSG, no artificial colours, no shortcuts. Real food from real farms.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Ready in 10 min</h3>
+        <p>Pre-prepped bases and fresh toppings. You never wait more than 10 minutes. Ever.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏥</div>
+        <h3>Dietitian-Approved</h3>
+        <p>Our menu is designed with certified nutritionists. Safe for diabetics, athletes, and weight-loss goals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="diet-section" id="plans">
+  <div class="container">
+    <h2>We Cater To Every Goal</h2>
+    <p class="subtitle">Filter by your dietary preference or fitness objective</p>
+    <div class="diet-pills">
+      <span class="pill">🥩 High Protein</span>
+      <span class="pill">🌱 Vegan</span>
+      <span class="pill">🥛 Vegetarian</span>
+      <span class="pill">🚫 Gluten-Free</span>
+      <span class="pill">🍬 Diabetic-Safe</span>
+      <span class="pill">🏋️ Muscle Gain</span>
+      <span class="pill">🔥 Weight Loss</span>
+      <span class="pill">🧘 Keto</span>
+      <span class="pill">💪 Post-Workout</span>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <h2>Real Results, Real Reviews</h2>
+    <p class="subtitle">From gym-goers, IT professionals, and families across Pune</p>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p>"Lost 8 kgs in 3 months eating here 5 days a week. The macros are accurate and the food is genuinely delicious. Finally a healthy place that doesn't taste like cardboard!"</p>
+        <div class="reviewer">
+          <div class="avatar">AK</div>
+          <div class="reviewer-info"><strong>Arjun Khanna</strong><span>Fitness Enthusiast · Baner</span></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p>"As a diabetic, I always struggled to eat out. The Green Bowl has 15+ dishes that are completely safe for me. I eat here guilt-free. My doctor is impressed!"</p>
+        <div class="reviewer">
+          <div class="avatar">PS</div>
+          <div class="reviewer-info"><strong>Priya Sharma</strong><span>Software Engineer · Viman Nagar</span></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p>"Order for my whole IT team every Friday. Everyone loves it — vegans, non-veg, keto folks — there's something for everyone. Service is fast and packaging is eco-friendly."</p>
+        <div class="reviewer">
+          <div class="avatar">RJ</div>
+          <div class="reviewer-info"><strong>Rahul Joshi</strong><span>Team Lead · Koregaon Park</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="order-section" id="order">
+  <div class="container">
+    <h2>🚀 Start Eating Better Today</h2>
+    <p>Order online, dine in, or subscribe to our weekly meal plan</p>
+    <div class="order-btns">
+      <a href="tel:+919876543210" class="btn-white">📞 Call to Order</a>
+      <a href="#" class="btn-lime">🛵 Order on Zomato</a>
+    </div>
+    <p style="margin-top: 1.5rem; opacity: 0.7; font-size: 0.9rem;">📍 Koregaon Park | Baner | Viman Nagar · Open 8 AM – 10 PM · Free delivery above ₹299</p>
+  </div>
+</section>
+
+<footer>
+  <strong>The Green Bowl</strong>
+  <p>Pune's Healthy Food Destination · 3 Locations · Open 8 AM – 10 PM</p>
+  <p>📞 +91 98765 43210 · 📧 hello@thegreenbowl.in</p>
+  <p style="margin-top: 1rem; opacity: 0.5; font-size: 0.8rem;">Demo site built by Invictus AI · <a href="https://invictus-ai.in" style="color: #74C69D;">invictus-ai.in</a></p>
+</footer>
+
+</body>
+</html>
