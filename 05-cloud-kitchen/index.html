@@ -1,463 +1,1766 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Biryani House — Authentic Dum Biryani | Pune</title>
-<meta name="description" content="Cloud kitchen in Pune. Restaurant-quality food delivered to your door. Fast delivery, fresh ingredients, consistent taste. Order now.">
-<meta name="keywords" content="cloud kitchen pune, food delivery pune, online food order pune, home delivery restaurant pune">
-<meta property="og:title" content="Biryani House — Authentic Dum Biryani | Pune">
-<meta property="og:description" content="Cloud kitchen in Pune. Restaurant-quality food delivered to your door. Fast delivery, fresh ingredients, consistent taste. Order now.">
-<meta property="og:type" content="website">
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  :root { --saffron: #FF6B00; --gold: #FFB300; --dark: #1A0A00; --cream: #FFF8F0; --brown: #7B3F00; --text: #2C1500; }
-  body { font-family: 'Segoe UI', sans-serif; background: var(--cream); color: var(--text); }
-  nav { background: var(--dark); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
-  .logo { color: var(--gold); font-size: 1.7rem; font-weight: 800; }
-  .logo span { color: var(--saffron); }
-  nav a { color: rgba(255,255,255,0.8); text-decoration: none; margin-left: 1.5rem; font-size: 0.9rem; }
-  nav a:hover { color: var(--gold); }
-  .nav-order { background: var(--saffron); color: white !important; padding: 0.5rem 1.3rem; border-radius: 6px; font-weight: 700; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Terrasse — French-Inspired Fine Dining, Koregaon Park, Pune</title>
+  <meta name="description" content="La Terrasse offers an intimate French-inspired continental dining experience in the heart of Koregaon Park, Pune. Tasting menus, wine pairings, private dining for 8–40 guests." />
+  <meta name="keywords" content="fine dining Pune, French restaurant Koregaon Park, continental cuisine Pune, private dining Pune, tasting menu, La Terrasse" />
 
-  .hero { background: linear-gradient(135deg, var(--dark) 0%, #3D1500 50%, #5C2A00 100%); min-height: 85vh; display: flex; align-items: center; padding: 4rem 2rem; position: relative; overflow: hidden; }
-  .hero::after { content: ''; position: absolute; right: 5%; top: 50%; transform: translateY(-50%); font-size: 16rem; opacity: 0.06; }
-  .hero-content { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; position: relative; z-index: 1; }
-  .hero-label { background: rgba(255,179,0,0.2); border: 1px solid rgba(255,179,0,0.5); color: var(--gold); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; display: inline-block; margin-bottom: 1rem; }
-  .hero-text h1 { color: white; font-size: 3.2rem; font-weight: 900; line-height: 1.15; margin-bottom: 1rem; }
-  .hero-text h1 span { color: var(--saffron); }
-  .hero-text p { color: rgba(255,255,255,0.8); font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem; }
-  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-  .btn-saffron { background: var(--saffron); color: white; padding: 0.9rem 2rem; border-radius: 8px; font-weight: 700; text-decoration: none; }
-  .btn-outline { border: 2px solid rgba(255,255,255,0.5); color: white; padding: 0.9rem 2rem; border-radius: 8px; font-weight: 700; text-decoration: none; }
-  .hero-right { }
-  .biryani-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,179,0,0.25); border-radius: 16px; padding: 1.8rem; margin-bottom: 1rem; }
-  .biryani-card h3 { color: var(--gold); font-size: 1rem; margin-bottom: 1rem; }
-  .variant { display: flex; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.85); font-size: 0.9rem; }
-  .variant:last-child { border-bottom: none; }
-  .variant-price { color: var(--saffron); font-weight: 700; }
+  <!-- OG Meta Tags -->
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:title" content="La Terrasse — Where Evenings Become Memories" />
+  <meta property="og:description" content="French-inspired continental fine dining in Koregaon Park, Pune. Handcrafted tasting menus, curated wine pairings, private events." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80" />
+  <meta property="og:url" content="https://laterrasse.in" />
+  <meta property="og:site_name" content="La Terrasse" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="La Terrasse Fine Dining, Pune" />
+  <meta name="twitter:description" content="Where evenings become memories. French-inspired cuisine in Koregaon Park." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80" />
 
-  .proof { background: var(--saffron); padding: 1.2rem 2rem; }
-  .proof-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1rem; }
-  .proof-stat { text-align: center; color: white; }
-  .proof-stat strong { display: block; font-size: 1.8rem; }
-  .proof-stat span { font-size: 0.85rem; opacity: 0.9; }
-
-  section { padding: 5rem 2rem; }
-  .container { max-width: 1100px; margin: 0 auto; }
-  h2 { font-size: 2.2rem; font-weight: 800; color: var(--dark); margin-bottom: 0.5rem; }
-  .subtitle { color: #777; margin-bottom: 3rem; font-size: 1rem; }
-  .section-accent { color: var(--saffron); font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
-
-  .menu-section { background: white; }
-  .menu-tabs { display: flex; gap: 0; border-bottom: 2px solid #f0e0cc; margin-bottom: 2rem; overflow-x: auto; }
-  .tab { padding: 0.8rem 1.5rem; cursor: pointer; font-size: 0.9rem; font-weight: 600; color: #888; white-space: nowrap; border-bottom: 2px solid transparent; margin-bottom: -2px; }
-  .tab.active { color: var(--saffron); border-bottom-color: var(--saffron); }
-  .dish-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-  .dish-card { border: 1px solid #f0e0cc; border-radius: 12px; overflow: hidden; transition: box-shadow 0.2s; }
-  .dish-card:hover { box-shadow: 0 8px 30px rgba(255,107,0,0.12); }
-  .dish-img { height: 150px; display: flex; align-items: center; justify-content: center; font-size: 5rem; }
-  .dish-img.bg1 { background: linear-gradient(135deg, #fff3e0, #ffcc80); }
-  .dish-img.bg2 { background: linear-gradient(135deg, #fbe9e7, #ff8a65); }
-  .dish-img.bg3 { background: linear-gradient(135deg, #f3e5f5, #ce93d8); }
-  .dish-img.bg4 { background: linear-gradient(135deg, #e8f5e9, #a5d6a7); }
-  .dish-info { padding: 1.2rem; }
-  .dish-info h3 { color: var(--dark); margin-bottom: 0.3rem; font-size: 1rem; }
-  .dish-info p { color: #888; font-size: 0.83rem; line-height: 1.5; margin-bottom: 0.8rem; }
-  .dish-footer { display: flex; justify-content: space-between; align-items: center; }
-  .dish-price { color: var(--saffron); font-weight: 800; font-size: 1.1rem; }
-  .spice-tag { font-size: 0.75rem; }
-
-  .legacy { background: var(--dark); padding: 5rem 2rem; }
-  .legacy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-  .legacy h2 { color: white; }
-  .legacy .subtitle { color: rgba(255,255,255,0.6); }
-  .legacy p { color: rgba(255,255,255,0.75); line-height: 1.9; margin-bottom: 1rem; }
-  .legacy-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
-  .leg-stat { background: rgba(255,255,255,0.06); padding: 1.2rem; border-radius: 12px; text-align: center; }
-  .leg-stat strong { display: block; color: var(--gold); font-size: 1.8rem; }
-  .leg-stat span { color: rgba(255,255,255,0.6); font-size: 0.85rem; }
-  .process-steps { }
-  .step { display: flex; gap: 1rem; margin-bottom: 1.5rem; }
-  .step-num { width: 40px; height: 40px; background: var(--saffron); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; flex-shrink: 0; }
-  .step-content h3 { color: white; margin-bottom: 0.3rem; }
-  .step-content p { color: rgba(255,255,255,0.6); font-size: 0.9rem; line-height: 1.6; }
-
-  .reviews { background: #FFF4E8; }
-  .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
-  .review-card { background: white; padding: 1.8rem; border-radius: 12px; border-top: 3px solid var(--saffron); }
-  .stars { color: var(--gold); font-size: 1.1rem; margin-bottom: 0.8rem; }
-  .review-card p { color: #555; line-height: 1.7; margin-bottom: 1rem; font-size: 0.93rem; font-style: italic; }
-  .reviewer strong { color: var(--dark); font-size: 0.9rem; }
-  .reviewer span { color: #aaa; font-size: 0.8rem; }
-
-  .order-cta { background: linear-gradient(135deg, var(--saffron), var(--brown)); padding: 5rem 2rem; text-align: center; }
-  .order-cta h2 { color: white; font-size: 2.5rem; }
-  .order-cta p { color: rgba(255,255,255,0.85); margin: 1rem 0 2rem; font-size: 1.1rem; }
-  .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-  .btn-white { background: white; color: var(--saffron); padding: 1rem 2.5rem; border-radius: 8px; font-weight: 800; text-decoration: none; font-size: 1rem; }
-  .btn-dark { background: var(--dark); color: white; padding: 1rem 2.5rem; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 1rem; }
-
-  footer { background: var(--dark); color: rgba(255,255,255,0.5); padding: 3rem 2rem; text-align: center; }
-  footer strong { color: var(--gold); display: block; margin-bottom: 0.5rem; font-size: 1.1rem; }
-
-  @media(max-width:768px) { .hero-content, .legacy-grid { grid-template-columns: 1fr; gap: 2rem; } .hero::after { display: none; } }
-
-  @media(max-width:768px){
-    .nav-links, .nav-cta { display:none!important; }
-    #mob-links-05cloudkitchen { display:none; }
-    #mob-links-05cloudkitchen.show { display:flex!important; flex-direction:column; position:absolute; top:70px; left:0; right:0; background:white; padding:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.15); z-index:50; }
-    #mob-links-05cloudkitchen.show a { margin:0!important; padding:10px 0; border-bottom:1px solid #eee; color:#333!important; display:block; }
-    #mob-btn-05cloudkitchen { display:block!important; }
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "La Terrasse",
+    "description": "French-inspired continental fine dining restaurant in Koregaon Park, Pune.",
+    "url": "https://laterrasse.in",
+    "telephone": "+91-20-4800-7700",
+    "email": "reservations@laterrasse.in",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12, North Main Road, Koregaon Park",
+      "addressLocality": "Pune",
+      "addressRegion": "Maharashtra",
+      "postalCode": "411001",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 18.5362,
+      "longitude": 73.8936
+    },
+    "servesCuisine": ["French", "Continental", "European"],
+    "priceRange": "₹₹₹₹",
+    "hasMenu": "https://laterrasse.in/menu",
+    "currenciesAccepted": "INR",
+    "paymentAccepted": "Cash, Credit Card, UPI",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "12:00",
+        "closes": "15:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "19:00",
+        "closes": "23:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday"],
+        "opens": "11:00",
+        "closes": "15:30"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "312"
+    },
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "Private Dining", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Wine Cellar", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Valet Parking", "value": true}
+    ]
   }
-</style>
+  </script>
 
-<link rel="canonical" href="https://biryanihousepune.in/">
-<meta property="og:image" content="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=1200&h=630&fit=crop">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Restaurant",
-  "name": "Biryani House",
-  "description": "Authentic Hyderabadi Dum Biryani Restaurant in Pune",
-  "url": "https://biryanihousepune.in/",
-  "telephone": "+919876543210",
-  "email": "orders@biryanihouse.in",
-  "servesCuisine": "Biryani, Hyderabadi, Mughlai, Kebabs",
-  "priceRange": "₹₹",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Camp Area, MG Road",
-    "addressLocality": "Camp, Pune",
-    "addressRegion": "Maharashtra",
-    "postalCode": "411001",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "18.5162",
-    "longitude": "73.8760"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.7",
-    "bestRating": "5",
-    "ratingCount": "8200"
-  },
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Mo-Su"
-      ],
-      "opens": "11:30",
-      "closes": "23:00"
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    :root {
+      --navy: #0A1628;
+      --navy-mid: #0F2040;
+      --navy-light: #162A4A;
+      --gold: #C9A96E;
+      --gold-light: #E0C98A;
+      --gold-pale: #F0E0B8;
+      --cream: #FFF8E7;
+      --cream-muted: #F5EDD8;
+      --text-muted: #8A9BB5;
+      --white: #FFFFFF;
+      --border: rgba(201,169,110,0.2);
+      --shadow-gold: 0 0 40px rgba(201,169,110,0.15);
+      --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
-  ],
-  "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=1200&h=630&fit=crop",
-  "acceptsReservations": "True"
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What types of biryani does Biryani House serve in Pune?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Biryani House serves 12 varieties of authentic dum biryani — Chicken, Mutton, Veg, Egg, Prawn, and more in Hyderabadi, Lucknowi, and Kolkata styles. All biryanis are slow-cooked for 3 hours with 12-hour marinated meat."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What makes Biryani House biryani special compared to others?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Every biryani is slow-cooked (dum) for 3 hours in sealed handis using 2-year aged basmati rice, hand-ground spices, genuine Kashmir saffron, and 12-hour marinated meat. No shortcuts, no pre-cooking — authentic dum since 2009."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does Biryani House deliver across Pune?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, all 5 Pune outlets deliver via Swiggy, Zomato, and direct orders. Family packs serve 4-6 people. Bulk catering for 25+ people available with advance booking. Call +91 98765 99999 for events."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does biryani cost at Biryani House Pune?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Chicken Dum Biryani starts at ₹220 (half) / ₹380 (full). Mutton starts at ₹299 (half) / ₹520 (full). A meal for two with biryani, kebabs, and drinks costs ₹500-₹900. Great value for authentic dum biryani."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Where are Biryani House outlets in Pune?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Biryani House has 5 outlets across Pune — Camp (MG Road), Kothrud, Baner, Hinjewadi, and Viman Nagar. All open daily 11:30 AM to 11 PM. Dine-in with rustic ambiance and ample parking at all locations."
-      }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: var(--navy);
+      color: var(--cream);
+      overflow-x: hidden;
+      line-height: 1.6;
     }
-  ]
-}
-</script>
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    a { color: var(--gold); text-decoration: none; transition: var(--transition); }
+    a:hover { color: var(--gold-light); }
+    img { display: block; max-width: 100%; }
+    section { position: relative; }
+
+    /* ===== SCROLLBAR ===== */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--navy); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+    /* ===== NAV ===== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 20px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: var(--transition);
+    }
+    nav.scrolled {
+      background: rgba(10, 22, 40, 0.97);
+      backdrop-filter: blur(12px);
+      padding: 14px 5%;
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--gold);
+      letter-spacing: 0.08em;
+    }
+    .nav-logo span {
+      display: block;
+      font-size: 0.55rem;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: -2px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--cream-muted);
+      font-weight: 400;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-reserve-btn {
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 9px 22px;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .nav-reserve-btn:hover {
+      background: var(--gold);
+      color: var(--navy);
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 1.5px;
+      background: var(--gold);
+      transition: var(--transition);
+    }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(10,22,40,0.98);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      color: var(--cream);
+      letter-spacing: 0.05em;
+    }
+    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-close {
+      position: absolute;
+      top: 24px; right: 5%;
+      font-size: 2rem;
+      color: var(--gold);
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=85&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center 40%;
+      background-attachment: fixed;
+      transform: scale(1.05);
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(10,22,40,0.88) 0%,
+        rgba(10,22,40,0.65) 50%,
+        rgba(10,22,40,0.82) 100%
+      );
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 0 20px;
+      max-width: 900px;
+    }
+    .hero-eyebrow {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeUp 1s ease 0.3s forwards;
+    }
+    .hero-title {
+      font-size: clamp(3.5rem, 9vw, 7rem);
+      font-weight: 300;
+      color: var(--cream);
+      line-height: 1.05;
+      margin-bottom: 10px;
+      opacity: 0;
+      animation: fadeUp 1s ease 0.6s forwards;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold);
+      font-weight: 300;
+    }
+    .hero-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      font-style: italic;
+      color: var(--cream-muted);
+      font-weight: 300;
+      margin-bottom: 40px;
+      opacity: 0;
+      animation: fadeUp 1s ease 0.9s forwards;
+    }
+    .hero-divider {
+      width: 60px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 40px;
+      opacity: 0;
+      animation: fadeUp 1s ease 1.1s forwards;
+    }
+    .hero-cta-group {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 1s ease 1.3s forwards;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 15px 36px;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      display: inline-block;
+    }
+    .btn-primary:hover {
+      background: var(--gold-light);
+      color: var(--navy);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(201,169,110,0.4);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--cream);
+      padding: 14px 36px;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      border: 1px solid rgba(255,248,231,0.4);
+      cursor: pointer;
+      transition: var(--transition);
+      display: inline-block;
+    }
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-2px);
+    }
+    .hero-scroll {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      animation: fadeUp 1s ease 1.8s forwards;
+    }
+    .hero-scroll span {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.62rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .scroll-line {
+      width: 1px;
+      height: 50px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollPulse 2s ease infinite;
+    }
+
+    /* ===== INFO STRIP ===== */
+    .info-strip {
+      background: var(--navy-mid);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 5%;
+    }
+    .info-strip-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .info-icon {
+      width: 18px;
+      height: 18px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .info-item p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+    .info-item strong {
+      color: var(--cream);
+      font-weight: 400;
+    }
+
+    /* ===== SECTION HEADERS ===== */
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .section-label {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      color: var(--cream);
+      font-weight: 300;
+    }
+    .section-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .section-rule {
+      width: 50px;
+      height: 1px;
+      background: var(--gold);
+      margin: 20px auto 0;
+    }
+    .section-sub {
+      max-width: 520px;
+      margin: 20px auto 0;
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    /* ===== ABOUT / INTRO ===== */
+    .about {
+      padding: 100px 5%;
+      background: var(--navy);
+    }
+    .about-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-image-wrap {
+      position: relative;
+    }
+    .about-img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+    .about-img-accent {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      width: 60%;
+      height: 60%;
+      border: 1px solid var(--gold);
+      opacity: 0.3;
+      pointer-events: none;
+    }
+    .about-gold-tag {
+      position: absolute;
+      top: 24px;
+      left: -20px;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 10px 20px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.9rem;
+      font-style: italic;
+      letter-spacing: 0.05em;
+    }
+    .about-text .section-header { text-align: left; }
+    .about-text .section-rule { margin-left: 0; }
+    .about-body {
+      margin-top: 28px;
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.85;
+      font-weight: 300;
+    }
+    .about-body p + p { margin-top: 16px; }
+    .about-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 40px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border);
+    }
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem;
+      color: var(--gold);
+      font-weight: 300;
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* ===== DISHES ===== */
+    .dishes {
+      padding: 100px 5%;
+      background: var(--navy-mid);
+    }
+    .dishes-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .dish-card {
+      background: var(--navy-light);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .dish-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(201,169,110,0.5);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5), var(--shadow-gold);
+    }
+    .dish-img-wrap {
+      position: relative;
+      overflow: hidden;
+      height: 220px;
+    }
+    .dish-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .dish-card:hover .dish-img { transform: scale(1.08); }
+    .dish-shimmer {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        105deg,
+        transparent 40%,
+        rgba(201,169,110,0.15) 50%,
+        transparent 60%
+      );
+      background-size: 200% 100%;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .dish-card:hover .dish-shimmer {
+      opacity: 1;
+      animation: shimmer 1.2s ease forwards;
+    }
+    .dish-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--gold);
+      color: var(--navy);
+      font-family: 'Lato', sans-serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 4px 10px;
+    }
+    .dish-body {
+      padding: 24px;
+    }
+    .dish-name {
+      font-size: 1.3rem;
+      color: var(--cream);
+      margin-bottom: 8px;
+      font-weight: 400;
+    }
+    .dish-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 18px;
+      font-weight: 300;
+    }
+    .dish-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+    .dish-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      color: var(--gold);
+      font-weight: 500;
+    }
+    .dish-tag {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* ===== WINE ===== */
+    .wine {
+      padding: 100px 5%;
+      background: var(--navy);
+      overflow: hidden;
+    }
+    .wine-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .wine-text .section-header { text-align: left; }
+    .wine-text .section-rule { margin-left: 0; }
+    .wine-body {
+      color: var(--text-muted);
+      font-size: 0.97rem;
+      line-height: 1.85;
+      margin-top: 24px;
+      font-weight: 300;
+    }
+    .wine-list {
+      list-style: none;
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .wine-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .wine-item-left h4 {
+      font-size: 1.05rem;
+      color: var(--cream);
+      font-weight: 400;
+    }
+    .wine-item-left span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+      display: block;
+    }
+    .wine-item-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+    .wine-image-wrap {
+      position: relative;
+    }
+    .wine-img {
+      width: 100%;
+      height: 560px;
+      object-fit: cover;
+    }
+    .wine-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,22,40,0.6) 0%, transparent 60%);
+    }
+    .wine-quote {
+      position: absolute;
+      bottom: 32px;
+      left: 24px;
+      right: 24px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--cream);
+      font-weight: 300;
+      line-height: 1.5;
+    }
+
+    /* ===== PRIVATE DINING ===== */
+    .private {
+      padding: 100px 5%;
+      background: var(--navy-mid);
+      position: relative;
+    }
+    .private-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=1600&q=80&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      opacity: 0.08;
+    }
+    .private-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .private-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 60px;
+    }
+    .private-card {
+      background: rgba(15,32,64,0.8);
+      border: 1px solid var(--border);
+      padding: 40px;
+      backdrop-filter: blur(8px);
+      transition: var(--transition);
+    }
+    .private-card:hover {
+      border-color: rgba(201,169,110,0.5);
+      transform: translateY(-4px);
+    }
+    .private-icon {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin-bottom: 24px;
+    }
+    .private-card h3 {
+      font-size: 1.5rem;
+      color: var(--cream);
+      margin-bottom: 12px;
+      font-weight: 400;
+    }
+    .private-card p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.75;
+      font-weight: 300;
+    }
+    .private-card .capacity {
+      display: inline-block;
+      margin-top: 20px;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+    }
+    .private-cta-wrap {
+      text-align: center;
+      margin-top: 60px;
+    }
+    .private-cta-sub {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 14px;
+    }
+
+    /* ===== CHEF ===== */
+    .chef {
+      padding: 100px 5%;
+      background: var(--navy);
+    }
+    .chef-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .chef-img-wrap {
+      position: relative;
+    }
+    .chef-img {
+      width: 100%;
+      height: 560px;
+      object-fit: cover;
+      object-position: top center;
+    }
+    .chef-frame {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      right: -20px;
+      bottom: -20px;
+      border: 1px solid var(--gold);
+      opacity: 0.2;
+      pointer-events: none;
+    }
+    .chef-text .section-header { text-align: left; }
+    .chef-text .section-rule { margin-left: 0; }
+    .chef-bio {
+      color: var(--text-muted);
+      font-size: 0.97rem;
+      line-height: 1.9;
+      margin-top: 24px;
+      font-weight: 300;
+    }
+    .chef-bio p + p { margin-top: 16px; }
+    .chef-signature {
+      margin-top: 36px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-style: italic;
+      color: var(--gold);
+      font-weight: 300;
+    }
+    .chef-title-tag {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+
+    /* ===== REVIEWS ===== */
+    .reviews {
+      padding: 100px 5%;
+      background: var(--navy-mid);
+      position: relative;
+      overflow: hidden;
+    }
+    .reviews::before {
+      content: '\201C';
+      position: absolute;
+      top: 40px;
+      left: 4%;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20rem;
+      color: rgba(201,169,110,0.04);
+      line-height: 1;
+      pointer-events: none;
+    }
+    .reviews-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .review-card {
+      background: var(--navy-light);
+      border: 1px solid var(--border);
+      padding: 36px;
+      transition: var(--transition);
+    }
+    .review-card:hover {
+      border-color: rgba(201,169,110,0.4);
+      transform: translateY(-3px);
+    }
+    .review-stars {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 20px;
+    }
+    .star {
+      color: var(--gold);
+      font-size: 0.9rem;
+    }
+    .review-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--cream-muted);
+      line-height: 1.75;
+      font-weight: 300;
+      margin-bottom: 24px;
+    }
+    .reviewer {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+    .reviewer-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--border);
+    }
+    .reviewer-name {
+      font-size: 0.88rem;
+      color: var(--cream);
+      font-weight: 400;
+    }
+    .reviewer-sub {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .review-platform {
+      margin-left: auto;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.7;
+    }
+
+    /* ===== RESERVATION ===== */
+    .reservation {
+      padding: 100px 5%;
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+    }
+    .reservation-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1600891964092-4316c288032e?w=1600&q=80&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      opacity: 0.07;
+    }
+    .reservation-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .reservation-inner .section-rule { margin: 20px auto 0; }
+    .res-form {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .res-form .full { grid-column: 1 / -1; }
+    .form-group { display: flex; flex-direction: column; }
+    .form-group label {
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: var(--navy-light);
+      border: 1px solid var(--border);
+      color: var(--cream);
+      padding: 13px 16px;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.9rem;
+      outline: none;
+      transition: var(--transition);
+      -webkit-appearance: none;
+    }
+    .form-group select option { background: var(--navy-mid); }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 2px rgba(201,169,110,0.1);
+    }
+    .form-group textarea { resize: none; height: 100px; }
+    .res-submit {
+      grid-column: 1 / -1;
+      background: var(--gold);
+      color: var(--navy);
+      border: none;
+      padding: 16px;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: 8px;
+    }
+    .res-submit:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(201,169,110,0.35);
+    }
+    .res-note {
+      margin-top: 20px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #060E1A;
+      padding: 70px 5% 30px;
+      border-top: 1px solid var(--border);
+    }
+    .footer-top {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 50px;
+      padding-bottom: 50px;
+      border-bottom: 1px solid var(--border);
+    }
+    .footer-brand .nav-logo { font-size: 2rem; margin-bottom: 16px; display: block; }
+    .footer-brand p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      font-weight: 300;
+    }
+    .footer-social {
+      display: flex;
+      gap: 14px;
+      margin-top: 24px;
+    }
+    .social-link {
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      transition: var(--transition);
+    }
+    .social-link:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+    .footer-col h4 {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li {
+      margin-bottom: 10px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+    .footer-col li a {
+      color: var(--text-muted);
+      transition: var(--transition);
+    }
+    .footer-col li a:hover { color: var(--gold); }
+    .footer-col .hours-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-size: 0.82rem;
+    }
+    .footer-col .hours-row span:last-child { color: var(--cream-muted); }
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 28px auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .footer-bottom p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    .footer-bottom p a { color: var(--text-muted); }
+    .footer-bottom p a:hover { color: var(--gold); }
+
+    /* ===== KEYFRAMES ===== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 1; transform: scaleY(1); }
+      50% { opacity: 0.3; transform: scaleY(0.7); }
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .dishes-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-inner, .wine-inner, .chef-inner { grid-template-columns: 1fr; gap: 50px; }
+      .about-img, .chef-img, .wine-img { height: 380px; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-reserve-btn { display: none; }
+      .hamburger { display: flex; }
+      .dishes-grid { grid-template-columns: 1fr; }
+      .private-grid { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .res-form { grid-template-columns: 1fr; }
+      .res-form .full { grid-column: auto; }
+      .footer-top { grid-template-columns: 1fr; gap: 36px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .info-strip-inner { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .about-stats { flex-direction: column; gap: 20px; }
+      .wine-inner { grid-template-columns: 1fr; }
+      .hero-bg { background-attachment: scroll; }
+      .private-bg, .reservation-bg { background-attachment: scroll; }
+    }
+    @media (max-width: 480px) {
+      .hero-title { font-size: 3rem; }
+      .hero-cta-group { flex-direction: column; align-items: center; }
+      .btn-primary, .btn-outline { width: 100%; text-align: center; }
+    }
+  </style>
 </head>
+
 <body>
 
-<nav>
-  <div class="logo">Biryani<span>House</span></div>
-  <div>
-    <a href="#menu">Menu</a>
-    <a href="#legacy">Our Story</a>
-    <a href="#order" class="nav-order">Order Now</a>
-  </div>
-<button id="mob-btn-05cloudkitchen" style="display:none;padding:8px;cursor:pointer;background:none;border:none;" onclick="document.getElementById('mob-links-05cloudkitchen').classList.toggle('show')" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-<div id="mob-links-05cloudkitchen"><a href="#menu">Menu</a>
-<a href="#legacy">Our Story</a>
-<a href="#order">Order Now</a></div>
-</nav>
+  <!-- NAVIGATION -->
+  <nav id="mainNav">
+    <div class="nav-logo">
+      La Terrasse
+      <span>Koregaon Park · Pune</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#wine">Wine</a></li>
+      <li><a href="#private">Private Dining</a></li>
+      <li><a href="#chef">Chef</a></li>
+    </ul>
+    <button class="nav-reserve-btn" onclick="document.getElementById('reservations').scrollIntoView({behavior:'smooth'})">Reserve a Table</button>
+    <div class="hamburger" id="hamburger" onclick="openMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
 
-<section class="hero">
-  <div class="hero-content">
-    <div class="hero-text">
-      <span class="hero-label"> Pune's #1 Dum Biryani Since 2009</span>
-      <h1>Slow-Cooked.<br><span>Saffron-Kissed.</span><br>Unforgettable.</h1>
-      <p>Authentic Hyderabadi dum biryani, sealed and slow-cooked for 3 hours with hand-ground spices. Not fast food — real food, made the right way.</p>
-      <div class="hero-btns">
-        <a href="#order" class="btn-saffron">Order Online</a>
-        <a href="#menu" class="btn-outline">View Full Menu</a>
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" onclick="closeMenu()">✕</button>
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#menu" onclick="closeMenu()">Menu</a>
+    <a href="#wine" onclick="closeMenu()">Wine</a>
+    <a href="#private" onclick="closeMenu()">Private Dining</a>
+    <a href="#chef" onclick="closeMenu()">Chef</a>
+    <a href="#reservations" onclick="closeMenu()" style="color: var(--gold);">Reserve</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Koregaon Park · Pune · Est. 2018</p>
+      <h1 class="hero-title">La <em>Terrasse</em></h1>
+      <p class="hero-subtitle">Where evenings become memories.</p>
+      <div class="hero-divider"></div>
+      <div class="hero-cta-group">
+        <a href="#reservations" class="btn-primary">Reservations Recommended</a>
+        <a href="#menu" class="btn-outline">Explore Menu</a>
       </div>
     </div>
-    <div class="hero-right">
-      <div class="biryani-card">
-        <h3> Signature Dum Biryani — Sizes</h3>
-        <div class="variant"><span>Chicken Dum Biryani · Half</span><span class="variant-price">₹220</span></div>
-        <div class="variant"><span>Chicken Dum Biryani · Full</span><span class="variant-price">₹380</span></div>
-        <div class="variant"><span>Mutton Dum Biryani · Half</span><span class="variant-price">₹299</span></div>
-        <div class="variant"><span>Mutton Dum Biryani · Full</span><span class="variant-price">₹520</span></div>
-        <div class="variant"><span>Veg Dum Biryani · Full</span><span class="variant-price">₹260</span></div>
-      </div>
-      <div class="biryani-card">
-        <h3>⏱ Dum Cooking Process</h3>
-        <div class="variant"><span>Marination</span><span class="variant-price">12 hours</span></div>
-        <div class="variant"><span>Dum slow-cook</span><span class="variant-price">3 hours</span></div>
-        <div class="variant"><span>Saffron infusion</span><span class="variant-price">Kesar imported</span></div>
-      </div>
+    <div class="hero-scroll">
+      <span>Discover</span>
+      <div class="scroll-line"></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<div class="proof">
-  <div class="proof-inner">
-    <div class="proof-stat"><strong>15 Yrs</strong><span>Since 2009</span></div>
-    <div class="proof-stat"><strong>3,200+</strong><span>Daily Orders</span></div>
-    <div class="proof-stat"><strong>4.9<svg width="14" height="14" viewBox="0 0 24 24" fill="#facc15" stroke="none" style="display:inline-block;vertical-align:middle;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></strong><span>Zomato Rating</span></div>
-    <div class="proof-stat"><strong>5 Outlets</strong><span>Across Pune</span></div>
-    <div class="proof-stat"><strong>12 Varieties</strong><span>Of Biryani</span></div>
-  </div>
-</div>
-
-<section id="menu" class="menu-section">
-  <div class="container">
-    <span class="section-accent">What We Serve</span>
-    <h2>The Full Menu</h2>
-    <p class="subtitle">Biryanis, kebabs, curries, and desserts — all made in-house</p>
-    <div class="menu-tabs">
-      <div class="tab active">Biryani</div>
-      <div class="tab">Kebabs</div>
-      <div class="tab">Curries</div>
-      <div class="tab">Breads</div>
-      <div class="tab">Desserts</div>
-    </div>
-    <div class="dish-grid">
-      <div class="dish-card">
-        <div class="dish-img bg1"></div>
-        <div class="dish-info">
-          <h3>Chicken Dum Biryani</h3>
-          <p>Basmati rice, 12hr marinated chicken, saffron, fried onions, fresh mint. Our bestseller since day 1.</p>
-          <div class="dish-footer"><span class="dish-price">₹380</span><span class="spice-tag"> Medium</span></div>
-        </div>
+  <!-- INFO STRIP -->
+  <div class="info-strip">
+    <div class="info-strip-inner">
+      <div class="info-item">
+        <svg class="info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <p><strong>12, North Main Road</strong> · Koregaon Park, Pune</p>
       </div>
-      <div class="dish-card">
-        <div class="dish-img bg2"></div>
-        <div class="dish-info">
-          <h3>Mutton Dum Biryani</h3>
-          <p>Tender mutton slow-cooked in aromatic spices, aged basmati, rose water, kewra essence.</p>
-          <div class="dish-footer"><span class="dish-price">₹520</span><span class="spice-tag"> Spicy</span></div>
-        </div>
+      <div class="info-item">
+        <svg class="info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <p><strong>Lunch:</strong> 12–3 PM · <strong>Dinner:</strong> 7–11:30 PM · Closed Mondays</p>
       </div>
-      <div class="dish-card">
-        <div class="dish-img bg4"></div>
-        <div class="dish-info">
-          <h3>Veg Dum Biryani</h3>
-          <p>Garden vegetables, paneer, cashews, saffron-infused basmati. Rich and aromatic.</p>
-          <div class="dish-footer"><span class="dish-price">₹260</span><span class="spice-tag"> Mild</span></div>
-        </div>
+      <div class="info-item">
+        <svg class="info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        <p><strong>+91-20-4800-7700</strong> · reservations@laterrasse.in</p>
       </div>
-      <div class="dish-card">
-        <div class="dish-img bg3"></div>
-        <div class="dish-info">
-          <h3>Prawn Biryani (Special)</h3>
-          <p>Tiger prawns, coastal masala, curry leaves, long grain basmati. Weekend special only.</p>
-          <div class="dish-footer"><span class="dish-price">₹620</span><span class="spice-tag"> Medium</span></div>
-        </div>
+      <div class="info-item">
+        <svg class="info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+        <p><strong>4.8 / 5</strong> · 312 verified reviews</p>
       </div>
     </div>
   </div>
-</section>
 
-<section class="legacy" id="legacy">
-  <div class="container">
-    <div class="legacy-grid">
-      <div>
-        <h2>15 Years of Dum</h2>
-        <p class="subtitle" style="color: rgba(255,255,255,0.5);">A family recipe. A Pune institution.</p>
-        <p>Biryani House was founded in 2009 by Imran Siddiqui, whose family brought the original Hyderabadi dum recipe from the kitchens of the Nizam. Every batch is made the same way it was made in 1985.</p>
-        <p>We use only aged Basmati (minimum 2 years), fresh spices ground every morning, and genuine saffron imported from Kashmir. There are no shortcuts. There never will be.</p>
-        <div class="legacy-stats">
-          <div class="leg-stat"><strong>15</strong><span>Years in Business</span></div>
-          <div class="leg-stat"><strong>5</strong><span>Pune Outlets</span></div>
-          <div class="leg-stat"><strong>12h</strong><span>Marination Time</span></div>
-          <div class="leg-stat"><strong>3h</strong><span>Dum Cook Time</span></div>
-        </div>
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-image-wrap" data-aos="fade-right" data-aos-duration="900">
+        <img class="about-img" src="https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=800&q=80&auto=format&fit=crop" alt="Candlelit fine dining table at La Terrasse" loading="lazy" />
+        <div class="about-img-accent"></div>
+        <div class="about-gold-tag">Est. Koregaon Park · 2018</div>
       </div>
-      <div class="process-steps">
-        <div class="step">
-          <div class="step-num">1</div>
-          <div class="step-content">
-            <h3>12-Hour Marination</h3>
-            <p>Meat marinated overnight in yogurt, freshly ground spices, and herbs. Never less than 12 hours.</p>
+      <div class="about-text" data-aos="fade-left" data-aos-duration="900" data-aos-delay="100">
+        <div class="section-header">
+          <span class="section-label">Our Story</span>
+          <h2 class="section-title">An <em>Art de Vivre</em><br/>in Pune's Heart</h2>
+          <div class="section-rule"></div>
+        </div>
+        <div class="about-body">
+          <p>La Terrasse was born from a quiet obsession — that dinner should never feel ordinary. Tucked into the leafy avenues of Koregaon Park, we brought to Pune the unhurried grace of a Parisian bistro and the bold confidence of modern continental cooking.</p>
+          <p>Every dish on our table traces its lineage to classical French technique, then surprises you with something deeply personal: an ingredient sourced from Maharashtra's farms, a spice borrowed from memory, a plating style that feels like art you're allowed to eat.</p>
+          <p>We serve those who believe the best conversations happen over excellent food and an unhurried glass of wine.</p>
+        </div>
+        <div class="about-stats">
+          <div>
+            <div class="stat-num">6+</div>
+            <div class="stat-label">Years of Excellence</div>
           </div>
-        </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <div class="step-content">
-            <h3>Aged Basmati Selection</h3>
-            <p>We use only 2-year aged Basmati from Punjab. The aging gives it the signature length and aroma.</p>
+          <div>
+            <div class="stat-num">12k+</div>
+            <div class="stat-label">Guests Hosted</div>
           </div>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <div class="step-content">
-            <h3>Sealed Dum Cooking</h3>
-            <p>Pot sealed with dough, cooked on dum (low heat) for 3 hours. Steam stays in, flavour concentrates.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">4</div>
-          <div class="step-content">
-            <h3>Saffron Finishing</h3>
-            <p>Kashmir Kesar dissolved in warm milk, drizzled over the top layer just before serving.</p>
+          <div>
+            <div class="stat-num">180+</div>
+            <div class="stat-label">Wine Labels</div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="reviews">
-  <div class="container">
-    <span class="section-accent">Guest Reviews</span>
-    <h2>What Pune Says</h2>
-    <p class="subtitle">Over 8,000 reviews on Zomato and Google</p>
-    <div class="review-grid">
-      <div class="review-card">
-        <div class="stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#facc15" stroke="none" style="display:inline-block;vertical-align:middle;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#facc15" stroke="none" style="display:inline-block;vertical-align:middle;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#facc15" stroke="none" style="display:inline-block;vertical-align:middle;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#facc15" stroke="none" style="display:inline-block;vertical-align:middle;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#facc15" stroke="none" style="display:inline-block;vertical-align:middle;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-        <p>"I've eaten biryani all over India. This is genuinely the best chicken biryani I've had outside Hyderabad. The meat is so tender and the rice is perfectly layered. No shortcuts here."</p>
-        <div class="reviewer"><strong>Amit Verma</strong><span>Food Critic · Pune Mirror</span></div>
-      </div>
-      <div class="review-card">
-        <div class="stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#facc15" stroke="none" style="display:inline-block;vertical-align:middle;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#facc15" stroke="none" style="display:inline-block;vertical-align:middle;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#facc15" stroke="none" style="display:inline-block;vertical-align:middle;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#facc15" stroke="none" style="display:inline-block;vertical-align:middle;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#facc15" stroke="none" style="display:inline-block;vertical-align:middle;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-        <p>"We order every Friday for our family of 8. The full mutton biryani feeds 4 adults comfortably and the taste is consistent EVERY time. In 6 years, never a bad order."</p>
-        <div class="reviewer"><strong>Fatima Sheikh</strong><span>Regular Customer · Kothrud</span></div>
-      </div>
-      <div class="review-card">
-        <div class="stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#facc15" stroke="none" style="display:inline-block;vertical-align:middle;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#facc15" stroke="none" style="display:inline-block;vertical-align:middle;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#facc15" stroke="none" style="display:inline-block;vertical-align:middle;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#facc15" stroke="none" style="display:inline-block;vertical-align:middle;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#facc15" stroke="none" style="display:inline-block;vertical-align:middle;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-        <p>"Ordered 50 family meals for our office Eid celebration. Delivered hot, on time, beautifully packed. Every colleague asked for the number. Best bulk order experience ever."</p>
-        <div class="reviewer"><strong>Sameer Qureshi</strong><span>Corporate Order · Hinjewadi</span></div>
+  <!-- SIGNATURE DISHES -->
+  <section class="dishes" id="menu">
+    <div data-aos="fade-up" data-aos-duration="700">
+      <div class="section-header">
+        <span class="section-label">Signature Menu</span>
+        <h2 class="section-title">Dishes Worth <em>Dressing Up For</em></h2>
+        <div class="section-rule"></div>
+        <p class="section-sub">Each plate is a quiet conversation between classical French tradition and a chef who never stops asking "what if?"</p>
       </div>
     </div>
-  </div>
-</section>
+    <div class="dishes-grid">
 
-<section class="order-cta" id="order">
-  <div class="container">
-    <h2> Order Your Biryani Now</h2>
-    <p>Home delivery · Dine-in · Bulk orders for events & corporates</p>
-    <div class="cta-btns">
-      <a href="tel:+919876543210" class="btn-white"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="display:inline-block;vertical-align:middle;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call to Order</a>
-      <a href="#" class="btn-dark"> Order on Swiggy</a>
+      <div class="dish-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80&auto=format&fit=crop" alt="Pan-Seared Duck Confit" loading="lazy" />
+          <div class="dish-shimmer"></div>
+          <div class="dish-badge">Chef's Signature</div>
+        </div>
+        <div class="dish-body">
+          <h3 class="dish-name">Pan-Seared Duck Confit</h3>
+          <p class="dish-desc">Slow-rendered duck leg, Puy lentil ragù, cherry gastrique, crisp potato galette, micro herbs.</p>
+          <div class="dish-footer">
+            <span class="dish-price">₹1,850</span>
+            <span class="dish-tag">Mains · Duck</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="80">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1673793225889-be95c1a4cc24?w=600&q=80&auto=format&fit=crop" alt="Black Truffle Risotto" loading="lazy" />
+          <div class="dish-shimmer"></div>
+          <div class="dish-badge">Vegetarian</div>
+        </div>
+        <div class="dish-body">
+          <h3 class="dish-name">Black Truffle Risotto</h3>
+          <p class="dish-desc">Carnaroli rice, Périgord truffle shavings, aged Parmesan foam, chive oil, truffle butter.</p>
+          <div class="dish-footer">
+            <span class="dish-price">₹1,400</span>
+            <span class="dish-tag">Mains · Vegetarian</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="160">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1558030006-450675393462?w=600&q=80&auto=format&fit=crop" alt="Grilled Tenderloin au Poivre" loading="lazy" />
+          <div class="dish-shimmer"></div>
+        </div>
+        <div class="dish-body">
+          <h3 class="dish-name">Grilled Tenderloin au Poivre</h3>
+          <p class="dish-desc">200g Australian beef fillet, green peppercorn cognac sauce, pomme purée, glazed asparagus.</p>
+          <div class="dish-footer">
+            <span class="dish-price">₹2,400</span>
+            <span class="dish-tag">Mains · Beef</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1519984388953-d2406bc725e1?w=600&q=80&auto=format&fit=crop" alt="Seared Sea Bass en Papillote" loading="lazy" />
+          <div class="dish-shimmer"></div>
+        </div>
+        <div class="dish-body">
+          <h3 class="dish-name">Sea Bass en Papillote</h3>
+          <p class="dish-desc">Mediterranean sea bass, fennel, cherry tomatoes, white wine, capers, saffron beurre blanc.</p>
+          <div class="dish-footer">
+            <span class="dish-price">₹1,650</span>
+            <span class="dish-tag">Mains · Seafood</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="80">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1541614101331-1a5a3a194e92?w=600&q=80&auto=format&fit=crop" alt="Warm Chocolate Fondant" loading="lazy" />
+          <div class="dish-shimmer"></div>
+          <div class="dish-badge">Dessert</div>
+        </div>
+        <div class="dish-body">
+          <h3 class="dish-name">Warm Chocolate Fondant</h3>
+          <p class="dish-desc">Valrhona dark chocolate lava cake, Tahitian vanilla bean ice cream, cocoa tuile, gold dust.</p>
+          <div class="dish-footer">
+            <span class="dish-price">₹650</span>
+            <span class="dish-tag">Desserts · Chocolate</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="160">
+        <div class="dish-img-wrap">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&q=80&auto=format&fit=crop" alt="Grand Marnier Soufflé" loading="lazy" />
+          <div class="dish-shimmer"></div>
+          <div class="dish-badge">30 min Notice</div>
+        </div>
+        <div class="dish-body">
+          <h3 class="dish-name">Grand Marnier Soufflé</h3>
+          <p class="dish-desc">Classic baked soufflé, orange curd centre, crème anglaise tableside, candied zest.</p>
+          <div class="dish-footer">
+            <span class="dish-price">₹850</span>
+            <span class="dish-tag">Desserts · Soufflé</span>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <p style="margin-top: 1.5rem; color: rgba(255,255,255,0.6); font-size: 0.9rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="display:inline-block;vertical-align:middle;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> 5 locations across Pune · Open 11 AM – 11:30 PM · Bulk orders: +91 98765 99999</p>
-  </div>
-</section>
+  </section>
 
+  <!-- WINE LIST -->
+  <section class="wine" id="wine">
+    <div class="wine-inner">
+      <div class="wine-text" data-aos="fade-right" data-aos-duration="900">
+        <div class="section-header">
+          <span class="section-label">The Cellar</span>
+          <h2 class="section-title">Wine, Chosen <em>with Intent</em></h2>
+          <div class="section-rule"></div>
+        </div>
+        <p class="wine-body">Our 180-label wine list is curated with the same care we extend to every plate. From structured Burgundies to effervescent Champagnes — each bottle is a story waiting to be uncorked alongside yours. Our sommelier is always at hand to find your perfect pairing.</p>
+        <ul class="wine-list">
+          <li class="wine-item">
+            <div class="wine-item-left">
+              <h4>Château Meyney, Saint-Estèphe</h4>
+              <span>Bordeaux, France · Cabernet Sauvignon · 2018</span>
+            </div>
+            <span class="wine-item-price">₹9,500</span>
+          </li>
+          <li class="wine-item">
+            <div class="wine-item-left">
+              <h4>Sancerre Blanc, Henri Bourgeois</h4>
+              <span>Loire Valley, France · Sauvignon Blanc · 2021</span>
+            </div>
+            <span class="wine-item-price">₹7,200</span>
+          </li>
+          <li class="wine-item">
+            <div class="wine-item-left">
+              <h4>Veuve Clicquot Brut NV</h4>
+              <span>Champagne, France · Pinot Noir Blend</span>
+            </div>
+            <span class="wine-item-price">₹12,500</span>
+          </li>
+          <li class="wine-item">
+            <div class="wine-item-left">
+              <h4>Sula Dindori Reserve Shiraz</h4>
+              <span>Nashik, India · Shiraz · 2022</span>
+            </div>
+            <span class="wine-item-price">₹3,800</span>
+          </li>
+        </ul>
+        <div style="margin-top: 36px;">
+          <a href="#reservations" class="btn-primary">Request Wine Pairing Menu</a>
+        </div>
+      </div>
+      <div class="wine-image-wrap" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+        <img class="wine-img" src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80&auto=format&fit=crop" alt="Wine glasses with fine wine" loading="lazy" />
+        <div class="wine-img-overlay"></div>
+        <p class="wine-quote">"Wine is not just a drink — it is the conversation before the conversation begins."</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- PRIVATE DINING -->
+  <section class="private" id="private">
+    <div class="private-bg"></div>
+    <div class="private-inner">
+      <div data-aos="fade-up" data-aos-duration="700">
+        <div class="section-header">
+          <span class="section-label">Exclusive Spaces</span>
+          <h2 class="section-title">Private Dining &amp; <em>Events</em></h2>
+          <div class="section-rule"></div>
+          <p class="section-sub">From intimate anniversary dinners to corporate celebrations, La Terrasse curates every detail of your gathering.</p>
+        </div>
+      </div>
+      <div class="private-grid">
+        <div class="private-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">
+          <div class="private-icon"></div>
+          <h3>The Salon Privé</h3>
+          <p>An intimate, chandelier-lit room with hand-selected art, custom floral arrangements, and a dedicated chef de rang. Ideal for proposals, anniversaries, and milestone dinners where every detail is yours to shape.</p>
+          <span class="capacity">8 – 16 Guests</span>
+        </div>
+        <div class="private-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+          <div class="private-icon"></div>
+          <h3>The Terrace Room</h3>
+          <p>Our glass-walled garden room opens to a private terrace under Pune's stars. Perfect for corporate dinners, product launches, and brand events — A/V ready with natural flow between indoor and outdoor spaces.</p>
+          <span class="capacity">20 – 40 Guests</span>
+        </div>
+        <div class="private-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="50">
+          <div class="private-icon"></div>
+          <h3>The Wine Table</h3>
+          <p>Dine inside our cellar, surrounded by 180 labels and the quiet hum of the temperature-controlled vault. Our sommelier leads an exclusive wine tasting paired with a curated 4-course dinner.</p>
+          <span class="capacity">8 – 12 Guests</span>
+        </div>
+        <div class="private-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="150">
+          <div class="private-icon"></div>
+          <h3>Corporate &amp; MICE</h3>
+          <p>From board dinners to team celebrations, we build bespoke menus, customised decor, and seamless coordination. Our event concierge handles invitations, dietary requirements, and private transfers.</p>
+          <span class="capacity">16 – 40 Guests</span>
+        </div>
+      </div>
+      <div class="private-cta-wrap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
+        <a href="#reservations" class="btn-primary">Inquire About Private Dining</a>
+        <p class="private-cta-sub">Our events team responds within 24 hours · reservations@laterrasse.in</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- CHEF'S STORY -->
+  <section class="chef" id="chef">
+    <div class="chef-inner">
+      <div class="chef-img-wrap" data-aos="fade-right" data-aos-duration="900">
+        <img class="chef-img" src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&q=80&auto=format&fit=crop" alt="Executive Chef at La Terrasse" loading="lazy" />
+        <div class="chef-frame"></div>
+      </div>
+      <div class="chef-text" data-aos="fade-left" data-aos-duration="900" data-aos-delay="100">
+        <div class="section-header">
+          <span class="section-label">The Kitchen</span>
+          <h2 class="section-title">Chef <em>Armand Lefèvre</em></h2>
+          <div class="section-rule"></div>
+        </div>
+        <div class="chef-bio">
+          <p>Armand Lefèvre grew up in Lyon — the gastronomic capital of France — where Sunday lunches lasted four hours and silence at the table was considered impolite. He trained under Michel Bras in Laguiole before spending five years in London refining his craft at a Michelin-starred institution.</p>
+          <p>His arrival in Pune in 2016 was, he says, "not an accident but a hunger." He found in Maharashtra's produce — the jaggery, the raw mangoes, the fragrant kokum — ingredients that held stories he wanted to tell in French.</p>
+          <p>At La Terrasse, Armand's cooking is personal. Nothing on the menu exists because it should — only because it must. He changes the tasting menu every six weeks, following the seasons and his own restless curiosity.</p>
+        </div>
+        <div class="chef-signature">Armand Lefèvre</div>
+        <div class="chef-title-tag">Executive Chef &amp; Co-Founder, La Terrasse</div>
+      </div>
+    </div>
+  </section>
 
-<!-- FAQ SECTION — SEO Enhanced -->
-<section id="faq" style="padding: 80px 5%; max-width: 900px; margin: 0 auto;">
-  <div style="text-align:center; margin-bottom: 48px;">
-    <span style="font-size: 0.75rem; letter-spacing: 4px; text-transform: uppercase; color: #FF6B00; display: block; margin-bottom: 12px; font-family: 'Segoe UI', Arial, sans-serif;">FAQ</span>
-    <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 12px; color: #FFF8F0;">Frequently Asked Questions</h2>
-    <div style="width: 50px; height: 2px; background: #FF6B00; margin: 0 auto 16px;"></div>
-    <p style="color: #8a7060; font-size: 0.95rem; font-family: 'Segoe UI', Arial, sans-serif;">Everything you need to know about Biryani House</p>
-  </div>
-  <div style="display:flex; flex-direction:column; gap: 10px;">
+  <!-- REVIEWS -->
+  <section class="reviews" id="reviews">
+    <div data-aos="fade-up" data-aos-duration="700">
+      <div class="section-header">
+        <span class="section-label">Guest Voices</span>
+        <h2 class="section-title">Evenings They <em>Still Talk About</em></h2>
+        <div class="section-rule"></div>
+      </div>
+    </div>
+    <div class="reviews-grid">
 
-    <details style="background: rgba(255,107,0,0.06); border: 1px solid rgba(255,107,0,0.2); border-radius: 10px; overflow: hidden; transition: border-color 0.3s;">
-      <summary style="padding: 18px 20px; font-weight: 600; font-size: 0.95rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: #FFF8F0; font-family: 'Segoe UI', Arial, sans-serif;">
-        What types of biryani does Biryani House serve in Pune?
-        <span style="font-size: 1.2rem; color: #FF6B00; margin-left: 12px; flex-shrink:0; transition: transform 0.3s;">+</span>
-      </summary>
-      <div style="padding: 0 20px 18px; font-size: 0.9rem; color: #8a7060; line-height: 1.7; font-family: 'Segoe UI', Arial, sans-serif;">Biryani House serves 12 varieties of authentic dum biryani — Chicken, Mutton, Veg, Egg, Prawn, and more in Hyderabadi, Lucknowi, and Kolkata styles. All biryanis are slow-cooked for 3 hours with 12-hour marinated meat.</div>
-    </details>
+      <div class="review-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"The Duck Confit was everything I've ever wanted — crisp skin, melt-apart meat, that cherry gastrique tying it all together. And the wine pairing the sommelier suggested was not a suggestion, it was a decision. Perfect evening."</p>
+        <div class="reviewer">
+          <img class="reviewer-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80&auto=format&fit=crop&face" alt="Rohan Mehta" loading="lazy" />
+          <div>
+            <div class="reviewer-name">Rohan Mehta</div>
+            <div class="reviewer-sub">VP Operations · Pune</div>
+          </div>
+          <span class="review-platform">Google</span>
+        </div>
+      </div>
 
-    <details style="background: rgba(255,107,0,0.06); border: 1px solid rgba(255,107,0,0.2); border-radius: 10px; overflow: hidden; transition: border-color 0.3s;">
-      <summary style="padding: 18px 20px; font-weight: 600; font-size: 0.95rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: #FFF8F0; font-family: 'Segoe UI', Arial, sans-serif;">
-        What makes Biryani House biryani special compared to others?
-        <span style="font-size: 1.2rem; color: #FF6B00; margin-left: 12px; flex-shrink:0; transition: transform 0.3s;">+</span>
-      </summary>
-      <div style="padding: 0 20px 18px; font-size: 0.9rem; color: #8a7060; line-height: 1.7; font-family: 'Segoe UI', Arial, sans-serif;">Every biryani is slow-cooked (dum) for 3 hours in sealed handis using 2-year aged basmati rice, hand-ground spices, genuine Kashmir saffron, and 12-hour marinated meat. No shortcuts, no pre-cooking — authentic dum since 2009.</div>
-    </details>
+      <div class="review-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="80">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"We hosted our 10th anniversary here. Chef Armand sent a surprise intermezzo dedicated to us — a tiny passion fruit sorbet with a card. My wife cried. I almost did. Nowhere else in Pune comes close to this level of attention."</p>
+        <div class="reviewer">
+          <img class="reviewer-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80&auto=format&fit=crop&face" alt="Vikram Joshi" loading="lazy" />
+          <div>
+            <div class="reviewer-name">Vikram Joshi</div>
+            <div class="reviewer-sub">Architect · Koregaon Park</div>
+          </div>
+          <span class="review-platform">Zomato</span>
+        </div>
+      </div>
 
-    <details style="background: rgba(255,107,0,0.06); border: 1px solid rgba(255,107,0,0.2); border-radius: 10px; overflow: hidden; transition: border-color 0.3s;">
-      <summary style="padding: 18px 20px; font-weight: 600; font-size: 0.95rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: #FFF8F0; font-family: 'Segoe UI', Arial, sans-serif;">
-        Does Biryani House deliver across Pune?
-        <span style="font-size: 1.2rem; color: #FF6B00; margin-left: 12px; flex-shrink:0; transition: transform 0.3s;">+</span>
-      </summary>
-      <div style="padding: 0 20px 18px; font-size: 0.9rem; color: #8a7060; line-height: 1.7; font-family: 'Segoe UI', Arial, sans-serif;">Yes, all 5 Pune outlets deliver via Swiggy, Zomato, and direct orders. Family packs serve 4-6 people. Bulk catering for 25+ people available with advance booking. Call +91 98765 99999 for events.</div>
-    </details>
+      <div class="review-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="40">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"As an expat from Paris, I have been searching for a restaurant that genuinely understands classical French cooking without being a caricature of it. La Terrasse is the real thing. The Soufflé au Grand Marnier made me genuinely emotional."</p>
+        <div class="reviewer">
+          <img class="reviewer-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80&auto=format&fit=crop&face" alt="Céline Dupont" loading="lazy" />
+          <div>
+            <div class="reviewer-name">Céline Dupont</div>
+            <div class="reviewer-sub">French Expat · Kalyani Nagar</div>
+          </div>
+          <span class="review-platform">TripAdvisor</span>
+        </div>
+      </div>
 
-    <details style="background: rgba(255,107,0,0.06); border: 1px solid rgba(255,107,0,0.2); border-radius: 10px; overflow: hidden; transition: border-color 0.3s;">
-      <summary style="padding: 18px 20px; font-weight: 600; font-size: 0.95rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: #FFF8F0; font-family: 'Segoe UI', Arial, sans-serif;">
-        How much does biryani cost at Biryani House Pune?
-        <span style="font-size: 1.2rem; color: #FF6B00; margin-left: 12px; flex-shrink:0; transition: transform 0.3s;">+</span>
-      </summary>
-      <div style="padding: 0 20px 18px; font-size: 0.9rem; color: #8a7060; line-height: 1.7; font-family: 'Segoe UI', Arial, sans-serif;">Chicken Dum Biryani starts at ₹220 (half) / ₹380 (full). Mutton starts at ₹299 (half) / ₹520 (full). A meal for two with biryani, kebabs, and drinks costs ₹500-₹900. Great value for authentic dum biryani.</div>
-    </details>
+      <div class="review-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="120">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"We booked the Terrace Room for our leadership dinner — 28 guests, custom menu, full wine pairing. The coordination was flawless. Every course arrived in sync, the service was discreet and professional, and the feedback from our team was unanimous: best dinner we've ever done."</p>
+        <div class="reviewer">
+          <img class="reviewer-avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80&auto=format&fit=crop&face" alt="Ananya Srivastava" loading="lazy" />
+          <div>
+            <div class="reviewer-name">Ananya Srivastava</div>
+            <div class="reviewer-sub">Director, People &amp; Culture · MNC</div>
+          </div>
+          <span class="review-platform">Google</span>
+        </div>
+      </div>
 
-    <details style="background: rgba(255,107,0,0.06); border: 1px solid rgba(255,107,0,0.2); border-radius: 10px; overflow: hidden; transition: border-color 0.3s;">
-      <summary style="padding: 18px 20px; font-weight: 600; font-size: 0.95rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: #FFF8F0; font-family: 'Segoe UI', Arial, sans-serif;">
-        Where are Biryani House outlets in Pune?
-        <span style="font-size: 1.2rem; color: #FF6B00; margin-left: 12px; flex-shrink:0; transition: transform 0.3s;">+</span>
-      </summary>
-      <div style="padding: 0 20px 18px; font-size: 0.9rem; color: #8a7060; line-height: 1.7; font-family: 'Segoe UI', Arial, sans-serif;">Biryani House has 5 outlets across Pune — Camp (MG Road), Kothrud, Baner, Hinjewadi, and Viman Nagar. All open daily 11:30 AM to 11 PM. Dine-in with rustic ambiance and ample parking at all locations.</div>
-    </details>
-  </div>
-</section>
+    </div>
+  </section>
 
-<footer>
-  <strong>Biryani House</strong>
-  <p>Pune's Dum Biryani Institution Since 2009 · 5 Locations</p>
-  <p><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="display:inline-block;vertical-align:middle;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +91 98765 43210 · orders@biryanihouse.in</p>
-  
-</footer>
+  <!-- RESERVATION CTA -->
+  <section class="reservation" id="reservations">
+    <div class="reservation-bg"></div>
+    <div class="reservation-inner">
+      <div data-aos="fade-up" data-aos-duration="700">
+        <div class="section-header">
+          <span class="section-label">Reserve Your Table</span>
+          <h2 class="section-title">Begin Your <em>Evening</em></h2>
+          <div class="section-rule"></div>
+          <p class="section-sub" style="color: var(--text-muted);">Reservations are strongly recommended, particularly for weekends, private dining, and special celebrations.</p>
+        </div>
+      </div>
+      <form class="res-form" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100" onsubmit="handleReservation(event)">
+        <div class="form-group">
+          <label for="res-name">Full Name</label>
+          <input type="text" id="res-name" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label for="res-phone">Phone Number</label>
+          <input type="tel" id="res-phone" placeholder="+91 98000 00000" required />
+        </div>
+        <div class="form-group">
+          <label for="res-date">Preferred Date</label>
+          <input type="date" id="res-date" required />
+        </div>
+        <div class="form-group">
+          <label for="res-time">Preferred Time</label>
+          <select id="res-time">
+            <option value="">Select time</option>
+            <option>12:00 PM</option>
+            <option>12:30 PM</option>
+            <option>1:00 PM</option>
+            <option>1:30 PM</option>
+            <option>7:00 PM</option>
+            <option>7:30 PM</option>
+            <option>8:00 PM</option>
+            <option>8:30 PM</option>
+            <option>9:00 PM</option>
+            <option>9:30 PM</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="res-guests">Number of Guests</label>
+          <select id="res-guests">
+            <option>2 Guests</option>
+            <option>3 Guests</option>
+            <option>4 Guests</option>
+            <option>5 Guests</option>
+            <option>6 Guests</option>
+            <option>7–10 Guests (Private)</option>
+            <option>11–40 Guests (Private Event)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="res-occasion">Occasion</label>
+          <select id="res-occasion">
+            <option value="">Select occasion</option>
+            <option>Birthday</option>
+            <option>Anniversary</option>
+            <option>Date Night</option>
+            <option>Corporate Dinner</option>
+            <option>Proposal</option>
+            <option>Family Celebration</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label for="res-notes">Special Requests</label>
+          <textarea id="res-notes" placeholder="Dietary requirements, allergies, special arrangements, preferred seating…"></textarea>
+        </div>
+        <button type="submit" class="res-submit">Reservations Recommended — Request My Table</button>
+      </form>
+      <p class="res-note" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+        Your reservation request will be confirmed within 2 hours via phone or email.<br/>
+        For same-day bookings or private dining inquiries, please call us at <strong style="color: var(--cream);">+91-20-4800-7700</strong>.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="nav-logo">La Terrasse<span>French-Inspired Fine Dining</span></span>
+        <p>A restaurant where the room is quiet enough to hear the conversation and the food is good enough to stop it. In Koregaon Park since 2018.</p>
+        <div class="footer-social">
+          <a class="social-link" href="#" aria-label="Instagram">in</a>
+          <a class="social-link" href="#" aria-label="Facebook">fb</a>
+          <a class="social-link" href="#" aria-label="Twitter">tw</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#menu">Signature Menu</a></li>
+          <li><a href="#wine">Wine List</a></li>
+          <li><a href="#private">Private Dining</a></li>
+          <li><a href="#chef">The Chef</a></li>
+          <li><a href="#reservations">Reservations</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <div class="hours-row"><span>Tue–Sat Lunch</span><span>12–3 PM</span></div>
+        <div class="hours-row"><span>Tue–Sun Dinner</span><span>7–11:30 PM</span></div>
+        <div class="hours-row"><span>Sunday Brunch</span><span>11 AM–3:30 PM</span></div>
+        <div class="hours-row"><span style="color: #e87070;">Monday</span><span>Closed</span></div>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>12, North Main Road</li>
+          <li>Koregaon Park, Pune 411001</li>
+          <li style="margin-top: 12px;"><a href="tel:+912048007700">+91-20-4800-7700</a></li>
+          <li><a href="mailto:reservations@laterrasse.in">reservations@laterrasse.in</a></li>
+          <li style="margin-top: 12px; color: var(--cream-muted);">Valet Parking Available</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 La Terrasse, Pune. All rights reserved. <a href="#">Privacy Policy</a> · <a href="#">Terms</a></p>
+      <p>Crafted with care in Koregaon Park · <a href="#">Sitemap</a></p>
+    </div>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // ===== AOS INIT =====
+    AOS.init({
+      once: true,
+      offset: 60,
+      easing: 'ease-out-quad'
+    });
+
+    // ===== NAV SCROLL =====
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // ===== MOBILE MENU =====
+    function openMenu() {
+      document.getElementById('mobileMenu').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+      document.getElementById('mobileMenu').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // ===== RESERVATION FORM =====
+    function handleReservation(e) {
+      e.preventDefault();
+      const name = document.getElementById('res-name').value.trim();
+      const btn = e.target.querySelector('.res-submit');
+      btn.textContent = '✓ Request Received — We\'ll Confirm Shortly';
+      btn.style.background = '#2D6A4F';
+      btn.style.color = '#FFF8E7';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.textContent = 'Reservations Recommended — Request My Table';
+        btn.style.background = '';
+        btn.style.color = '';
+        btn.disabled = false;
+        e.target.reset();
+      }, 5000);
+    }
+
+    // ===== SET MIN DATE FOR RESERVATION =====
+    const dateInput = document.getElementById('res-date');
+    if (dateInput) {
+      const today = new Date();
+      const yyyy = today.getFullYear();
+      const mm = String(today.getMonth() + 1).padStart(2, '0');
+      const dd = String(today.getDate()).padStart(2, '0');
+      dateInput.min = `${yyyy}-${mm}-${dd}`;
+    }
+
+    // ===== SMOOTH PARALLAX DAMPENING (desktop) =====
+    if (window.innerWidth > 768) {
+      const heroBg = document.querySelector('.hero-bg');
+      window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        if (scrollY < window.innerHeight * 1.5) {
+          heroBg.style.transform = `scale(1.05) translateY(${scrollY * 0.25}px)`;
+        }
+      }, { passive: true });
+    }
+  </script>
 
 </body>
 </html>
